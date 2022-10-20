@@ -26,3 +26,8 @@ a {
     color-scheme: dark;
   }
 }
+:root{
+  --var-text-white: rgb(255, 255, 255);
+  --var-text-blue: rgb(29, 29, 73); 
+  --var-text-violet: rgb(29, 32, 73); 
+}

@@ -1,0 +1,68 @@
+.container{
+    margin-bottom: 6rem;
+}
+
+.title {
+  font-size: 4rem;
+  font-weight: 700;
+}
+.title .title1 {
+  color: var(--var-text-blue);
+}
+
+.title .title2 {
+  color: var(--var-text-white);
+  background-color: var(--var-text-blue); /* this is in case the browser doesn’t support CSS gradients */
+  background-image: linear-gradient(12deg, var(--var-text-blue), var(--var-text-violet), var(--var-text-white));
+  background-size: 100%;
+  background-repeat: repeat;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
+
+.title .title3 {
+  color: var(--var-text-white);
+}
+
+.subtitle{
+    color: var(--var-text-violet);
+    font-size: 1.5rem;
+    line-height: 2rem;
+    margin-top: 0.5rem;
+
+}
+.buttonWrapper{
+    margin-top: 2rem;
+}
+
+.buttonWrapper .button{
+    text-align: center;
+    border-radius: 2px;
+    width: 15rem;
+    height: 4rem;
+    cursor: pointer;
+    background: transparent;
+    border: 1px solid var(--var-text-blue);
+    outline: none;
+    transition: 1s ease-in-out;
+}
+
+.buttonWrapper .button:hover {
+    transition: 1s ease-in-out;
+    background: var(--var-text-blue);
+  }
+
+.buttonWrapper .button:hover span{
+    color: var(--var-text-white);
+    font-weight: 300;
+}
+
+.buttonWrapper .button span {
+    color:  var(--var-text-blue);
+    font-size: 1.2rem;
+    font-weight: 300;
+  }
+  
+  
