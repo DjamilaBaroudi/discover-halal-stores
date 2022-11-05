@@ -26,6 +26,27 @@ a {
     color-scheme: dark;
   }
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p,
+pre{
+  margin: 0;
+}
+
+button{
+  background-color: transparent;
+  background-image: none;
+  font-weight: 600;
+}
+button:focus{
+  outline: 1px dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+}
 :root{
   --var-text-white: rgb(255, 255, 255);
   --var-text-blue: rgb(29, 29, 73); 
