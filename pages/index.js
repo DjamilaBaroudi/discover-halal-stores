@@ -4,13 +4,21 @@ import styles from '../styles/Home.module.css'
 import Banner from '../components/banner'
 import Card from '../components/card'
 import HalalStores from '../data/halal-stores.json';
-export default function Home() {
+
+export async function getStaticProps(context) {
+  return {
+    props: {
+      HalalStores,
+    },
+  };
+}
+
+export default function Home(props) {
   const handleOnBannerBtnClick = (e) => {
     e.target.innerHTML = 'Loading ...';
   }
 
-  const halalStores = HalalStores.local_results.places;
-  console.log(halalStores);
+  const halalStores = props.HalalStores.local_results.places;
 
   return (
     <div className={styles.container}>
