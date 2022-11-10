@@ -2,11 +2,16 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import Banner from '../components/banner'
-
+import Card from '../components/card'
+import HalalStores from '../data/halal-stores.json';
 export default function Home() {
   const handleOnBannerBtnClick = (e) => {
     e.target.innerHTML = 'Loading ...';
   }
+
+  const halalStores = HalalStores.local_results.places;
+  console.log(halalStores);
+
   return (
     <div className={styles.container}>
       <Head>
@@ -17,8 +22,25 @@ export default function Home() {
 
       <main className={styles.main}>
         <Banner buttonText={'View stores nearby'} handleOnClick={handleOnBannerBtnClick} />
-        <div className={styles.heroImage}>
+        {/*      <div className={styles.heroImage}>
           <Image src='/static/hero-image.png' alt='hero image' width={700} height={400} />
+        </div> */}
+        <div className={styles.cardLayout}>
+          {halalStores.map(store => {
+            return (
+              <Card
+                key={store.place_id}
+                name={store.title}
+                imgUrl={store.image_url}
+                href={`/halal-store/${store.place_id}`}
+                className={styles.card}
+              >
+              </Card>
+            )
+          })
+          }
+
+
         </div>
       </main>
 

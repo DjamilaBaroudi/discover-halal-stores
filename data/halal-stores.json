@@ -1,0 +1,461 @@
+{
+  "search_metadata": {
+    "id": "63688e85ef7ddac01c0fb53a",
+    "status": "Success",
+    "json_endpoint": "https://serpapi.com/searches/e5ca65027faf7f0c/63688e85ef7ddac01c0fb53a.json",
+    "created_at": "2022-11-07 04:50:13 UTC",
+    "processed_at": "2022-11-07 04:50:13 UTC",
+    "google_url": "https://www.google.de/search?q=halal+stores&oq=halal+stores&uule=w+CAIQICIVQmVybGluLEJlcmxpbixHZXJtYW55&hl=de&gl=de&sourceid=chrome&ie=UTF-8",
+    "raw_html_file": "https://serpapi.com/searches/e5ca65027faf7f0c/63688e85ef7ddac01c0fb53a.html",
+    "total_time_taken": 1.02
+  },
+  "search_parameters": {
+    "engine": "google",
+    "q": "halal stores",
+    "location_requested": "Berlin, Berlin, Germany",
+    "location_used": "Berlin,Berlin,Germany",
+    "google_domain": "google.de",
+    "hl": "de",
+    "gl": "de",
+    "device": "desktop"
+  },
+  "search_information": {
+    "organic_results_state": "Results for exact spelling",
+    "query_displayed": "halal stores",
+    "total_results": 109000000,
+    "time_taken_displayed": 0.51,
+    "menu_items": [
+      {
+        "position": 1,
+        "title": "Alle"
+      },
+      {
+        "position": 2,
+        "title": "Maps",
+        "link": "https://maps.google.de/maps?hl=de&uule=w+CAIQICIVQmVybGluLEJlcmxpbixHZXJtYW55&q=halal+stores&gl=de&um=1&ie=UTF-8&sa=X&ved=2ahUKEwiKttDFopv7AhVFFlkFHVInCMMQ_AUoAXoECAEQAw"
+      },
+      {
+        "position": 3,
+        "title": "Shopping",
+        "link": "https://www.google.de/search?q=halal+stores&hl=de&gl=de&source=lnms&tbm=shop&sa=X&ved=2ahUKEwiKttDFopv7AhVFFlkFHVInCMMQ_AUoAnoECAEQBA",
+        "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=google&gl=de&google_domain=google.de&hl=de&location=Berlin%2C+Berlin%2C+Germany&q=halal+stores&tbm=shop"
+      },
+      {
+        "position": 4,
+        "title": "Bilder",
+        "link": "https://www.google.de/search?q=halal+stores&hl=de&gl=de&source=lnms&tbm=isch&sa=X&ved=2ahUKEwiKttDFopv7AhVFFlkFHVInCMMQ_AUoA3oECAEQBQ",
+        "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=google&gl=de&google_domain=google.de&hl=de&location=Berlin%2C+Berlin%2C+Germany&q=halal+stores&tbm=isch"
+      },
+      {
+        "position": 5,
+        "title": "News",
+        "link": "https://www.google.de/search?q=halal+stores&hl=de&gl=de&source=lnms&tbm=nws&sa=X&ved=2ahUKEwiKttDFopv7AhVFFlkFHVInCMMQ_AUoBHoECAEQBg",
+        "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=google&gl=de&google_domain=google.de&hl=de&location=Berlin%2C+Berlin%2C+Germany&q=halal+stores&tbm=nws"
+      }
+    ]
+  },
+  "local_map": {
+    "link": "https://www.google.de/search?hl=de&gl=de&q=halal+stores&npsic=0&rflfq=1&rldoc=1&rllag=52549295,13411022,8286&tbm=lcl&sa=X&ved=2ahUKEwiKttDFopv7AhVFFlkFHVInCMMQtgN6BAgcEAE",
+    "image": "https://serpapi.com/searches/63688e85ef7ddac01c0fb53a/images/25d4138379745e25269932b0e4b58989.png",
+    "gps_coordinates": {
+      "latitude": 52.549295,
+      "longitude": 13.411022,
+      "altitude": 8286
+    }
+  },
+  "local_results": {
+    "more_locations_link": "https://www.google.de/search?hl=de&gl=de&tbs=lf:1,lf_ui:10&tbm=lcl&q=halal+stores&rflfq=1&num=10&uule=w+CAIQICIVQmVybGluLEJlcmxpbixHZXJtYW55&sa=X&ved=2ahUKEwiKttDFopv7AhVFFlkFHVInCMMQjGp6BAgdEAI",
+    "places": [
+      {
+        "position": 1,
+        "title": "Alquds Lebensmittel und Fleischhandel HALAL",
+        "place_id": "4086392656995363413",
+        "lsig": "AB86z5UnONdmeAjdSABb9pSa2zKn",
+        "place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=de&google_domain=google.de&hl=de&location=Berlin%2C+Berlin%2C+Germany&lsig=AB86z5UnONdmeAjdSABb9pSa2zKn&ludocid=4086392656995363413&q=halal+stores&tbm=lcl",
+        "description": "Einkaufen im Geschäft",
+        "rating": 3.7,
+        "reviews": 36,
+        "type": "Lebensmittelhändler",
+        "hours": "Frankfurter Allee 71-77 · 030 89065336",
+        "address": "3,7(36) · Lebensmittelhändler",
+        "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipNaAHiaMEYJ530AnkployGi3aJSHaF6tKKhpSPl=w92-h92-n-k-no",
+        "image_url": "https://unsplash.com/photos/kr_88BakygA"
+      },
+      {
+        "position": 2,
+        "title": "Halal Super Market - Arabisch",
+        "place_id": "11667820476661176135",
+        "lsig": "AB86z5VHpQkDHM5JOZQEBGRjx--2",
+        "place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=de&google_domain=google.de&hl=de&location=Berlin%2C+Berlin%2C+Germany&lsig=AB86z5VHpQkDHM5JOZQEBGRjx--2&ludocid=11667820476661176135&q=halal+stores&tbm=lcl",
+        "description": "Einkaufen im Geschäft·Abholung vor dem Laden·Lieferdienst",
+        "rating": 4.5,
+        "reviews": 38,
+        "type": "Lebensmittelhändler",
+        "hours": "Ernststraße 68 · 0176 47108204",
+        "address": "4,5(38) · Lebensmittelhändler",
+        "thumbnail": "https://serpapi.com/searches/63688e85ef7ddac01c0fb53a/images/4af49212d0210133e0c8e56cc210b47080d8c9fcc4add293dd5e9d1273bdb85c34fc3a03ebb5395e.jpeg",
+        "image_url": "https://serpapi.com/searches/63688e85ef7ddac01c0fb53a/images/4af49212d0210133e0c8e56cc210b47080d8c9fcc4add293dd5e9d1273bdb85c34fc3a03ebb5395e.jpeg"
+
+      },
+      {
+        "position": 3,
+        "title": "Syriana Halal Supermarkt",
+        "place_id": "17728449521431601681",
+        "lsig": "AB86z5UIAlOPoBaig1xNkQ7NekyW",
+        "place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=de&google_domain=google.de&hl=de&location=Berlin%2C+Berlin%2C+Germany&lsig=AB86z5UIAlOPoBaig1xNkQ7NekyW&ludocid=17728449521431601681&q=halal+stores&tbm=lcl",
+        "description": "Einkaufen im Geschäft",
+        "rating": 4.4,
+        "reviews": 130,
+        "type": "Lebensmittelhändler",
+        "hours": "Warnitzer Str. 6",
+        "address": "4,4(130) · Lebensmittelhändler",
+        "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipOpZZ-yKI4qx5yk-90Y0uVDvhN7Jx70GGlVJdnM=w92-h92-n-k-no",
+        "image_url": "https://pr0.nicelocal.com.de/Nq8aR2nAi-RlgDFDHomC4w/2000x1500,q75/4px-BW84_n0QJGVPszge3NRBsKw-2VcOifrJIjPYFYkOtaCZxxXQ2TgTQGUf_G-nONFzciAH0HDfu_U4KNmXLagPvgvCX41nyS0tUWJPjRbneleTtZyKlQ"
+      }
+    ]
+  },
+  "inline_images": [
+    {
+      "link": "https://www.google.de/search?source=univ&tbm=isch&q=halal+stores&gl=de&hl=de&fir=MLzU8TRyQ6aSmM%252CuZI6hag7mzmxFM%252C_%253BmSMu0R5R8pFaMM%252CXh9h5NG7W7e09M%252C_%253BaVwJk6LrHCDfBM%252CD64VzJTaYmDt2M%252C_%253BuUyP883SE5rp9M%252C4XtAz-QMaEgs8M%252C_%253BQC-TAJeuo6rmKM%252C4XtAz-QMaEgs8M%252C_%253BAgRzkVHcX2t-IM%252C6KisFWxt8XzYrM%252C_%253Bw5ccxtFjNhM5IM%252CmpuYVX2UxO66tM%252C_%253B-B5nnjkDCJuvGM%252CyaVnAF4-vlFPyM%252C_%253B7Eevj2RU-QjflM%252CsX5aI_z9cZJnMM%252C_%253B86urWm1lqtyeSM%252CWNBYeuMGtuFUTM%252C_&usg=AI4_-kTGD1WEog-471YPpvSUrN_1ooTgHw&sa=X&ved=2ahUKEwiKttDFopv7AhVFFlkFHVInCMMQ9AF6BAg2EAA#imgrc=MLzU8TRyQ6aSmM",
+      "source": "https://www.halal-online-shop.de/",
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGDSgYR-MU7CsZSbqRv_mPn-u-6Q2x__YgxF-lQx5y&s"
+    },
+    {
+      "link": "https://www.google.de/search?source=univ&tbm=isch&q=halal+stores&gl=de&hl=de&fir=MLzU8TRyQ6aSmM%252CuZI6hag7mzmxFM%252C_%253BmSMu0R5R8pFaMM%252CXh9h5NG7W7e09M%252C_%253BaVwJk6LrHCDfBM%252CD64VzJTaYmDt2M%252C_%253BuUyP883SE5rp9M%252C4XtAz-QMaEgs8M%252C_%253BQC-TAJeuo6rmKM%252C4XtAz-QMaEgs8M%252C_%253BAgRzkVHcX2t-IM%252C6KisFWxt8XzYrM%252C_%253Bw5ccxtFjNhM5IM%252CmpuYVX2UxO66tM%252C_%253B-B5nnjkDCJuvGM%252CyaVnAF4-vlFPyM%252C_%253B7Eevj2RU-QjflM%252CsX5aI_z9cZJnMM%252C_%253B86urWm1lqtyeSM%252CWNBYeuMGtuFUTM%252C_&usg=AI4_-kTGD1WEog-471YPpvSUrN_1ooTgHw&sa=X&ved=2ahUKEwiKttDFopv7AhVFFlkFHVInCMMQ9AF6BAhaEAA#imgrc=mSMu0R5R8pFaMM",
+      "source": "https://en.wikipedia.org/wiki/Halal",
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPY2f13pC-mdxro_2hT1W2_DglA49A9BiBPIjJAsJMfg&s"
+    },
+    {
+      "link": "https://www.google.de/search?source=univ&tbm=isch&q=halal+stores&gl=de&hl=de&fir=MLzU8TRyQ6aSmM%252CuZI6hag7mzmxFM%252C_%253BmSMu0R5R8pFaMM%252CXh9h5NG7W7e09M%252C_%253BaVwJk6LrHCDfBM%252CD64VzJTaYmDt2M%252C_%253BuUyP883SE5rp9M%252C4XtAz-QMaEgs8M%252C_%253BQC-TAJeuo6rmKM%252C4XtAz-QMaEgs8M%252C_%253BAgRzkVHcX2t-IM%252C6KisFWxt8XzYrM%252C_%253Bw5ccxtFjNhM5IM%252CmpuYVX2UxO66tM%252C_%253B-B5nnjkDCJuvGM%252CyaVnAF4-vlFPyM%252C_%253B7Eevj2RU-QjflM%252CsX5aI_z9cZJnMM%252C_%253B86urWm1lqtyeSM%252CWNBYeuMGtuFUTM%252C_&usg=AI4_-kTGD1WEog-471YPpvSUrN_1ooTgHw&sa=X&ved=2ahUKEwiKttDFopv7AhVFFlkFHVInCMMQ9AF6BAhfEAA#imgrc=aVwJk6LrHCDfBM",
+      "source": "https://www.bbc.com/news/uk-27324224",
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUR5H6u0u5hR0AD8fGTy7Tk1rm8BbEhY8Mp2ecRWGETw&s"
+    },
+    {
+      "link": "https://www.google.de/search?source=univ&tbm=isch&q=halal+stores&gl=de&hl=de&fir=MLzU8TRyQ6aSmM%252CuZI6hag7mzmxFM%252C_%253BmSMu0R5R8pFaMM%252CXh9h5NG7W7e09M%252C_%253BaVwJk6LrHCDfBM%252CD64VzJTaYmDt2M%252C_%253BuUyP883SE5rp9M%252C4XtAz-QMaEgs8M%252C_%253BQC-TAJeuo6rmKM%252C4XtAz-QMaEgs8M%252C_%253BAgRzkVHcX2t-IM%252C6KisFWxt8XzYrM%252C_%253Bw5ccxtFjNhM5IM%252CmpuYVX2UxO66tM%252C_%253B-B5nnjkDCJuvGM%252CyaVnAF4-vlFPyM%252C_%253B7Eevj2RU-QjflM%252CsX5aI_z9cZJnMM%252C_%253B86urWm1lqtyeSM%252CWNBYeuMGtuFUTM%252C_&usg=AI4_-kTGD1WEog-471YPpvSUrN_1ooTgHw&sa=X&ved=2ahUKEwiKttDFopv7AhVFFlkFHVInCMMQ9AF6BAhbEAA#imgrc=uUyP883SE5rp9M",
+      "source": "https://www.emvoyoe.de/halal-restaurants-in-frankfurt/",
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSying6GOgNjTha-RwBfLuFDxbd8jKGByFVevN1rZ1vjg&s"
+    },
+    {
+      "link": "https://www.google.de/search?source=univ&tbm=isch&q=halal+stores&gl=de&hl=de&fir=MLzU8TRyQ6aSmM%252CuZI6hag7mzmxFM%252C_%253BmSMu0R5R8pFaMM%252CXh9h5NG7W7e09M%252C_%253BaVwJk6LrHCDfBM%252CD64VzJTaYmDt2M%252C_%253BuUyP883SE5rp9M%252C4XtAz-QMaEgs8M%252C_%253BQC-TAJeuo6rmKM%252C4XtAz-QMaEgs8M%252C_%253BAgRzkVHcX2t-IM%252C6KisFWxt8XzYrM%252C_%253Bw5ccxtFjNhM5IM%252CmpuYVX2UxO66tM%252C_%253B-B5nnjkDCJuvGM%252CyaVnAF4-vlFPyM%252C_%253B7Eevj2RU-QjflM%252CsX5aI_z9cZJnMM%252C_%253B86urWm1lqtyeSM%252CWNBYeuMGtuFUTM%252C_&usg=AI4_-kTGD1WEog-471YPpvSUrN_1ooTgHw&sa=X&ved=2ahUKEwiKttDFopv7AhVFFlkFHVInCMMQ9AF6BAhXEAA#imgrc=QC-TAJeuo6rmKM",
+      "source": "https://www.emvoyoe.de/halal-restaurants-in-frankfurt/",
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbCXQQAIoQmMmG38A_cJpavxG8H75lmLU-UJXwhq5p&s"
+    },
+    {
+      "link": "https://www.google.de/search?source=univ&tbm=isch&q=halal+stores&gl=de&hl=de&fir=MLzU8TRyQ6aSmM%252CuZI6hag7mzmxFM%252C_%253BmSMu0R5R8pFaMM%252CXh9h5NG7W7e09M%252C_%253BaVwJk6LrHCDfBM%252CD64VzJTaYmDt2M%252C_%253BuUyP883SE5rp9M%252C4XtAz-QMaEgs8M%252C_%253BQC-TAJeuo6rmKM%252C4XtAz-QMaEgs8M%252C_%253BAgRzkVHcX2t-IM%252C6KisFWxt8XzYrM%252C_%253Bw5ccxtFjNhM5IM%252CmpuYVX2UxO66tM%252C_%253B-B5nnjkDCJuvGM%252CyaVnAF4-vlFPyM%252C_%253B7Eevj2RU-QjflM%252CsX5aI_z9cZJnMM%252C_%253B86urWm1lqtyeSM%252CWNBYeuMGtuFUTM%252C_&usg=AI4_-kTGD1WEog-471YPpvSUrN_1ooTgHw&sa=X&ved=2ahUKEwiKttDFopv7AhVFFlkFHVInCMMQ9AF6BAhYEAA#imgrc=AgRzkVHcX2t-IM",
+      "source": "https://www.tripadvisor.de/Restaurants-g188590-zfz10751-Amsterdam_North_Holland_Province.html",
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToLOFapSS3Lt3xD1cGagjmSgwb6BgZqCnqEdT5CLVGmw&s"
+    },
+    {
+      "link": "https://www.google.de/search?source=univ&tbm=isch&q=halal+stores&gl=de&hl=de&fir=MLzU8TRyQ6aSmM%252CuZI6hag7mzmxFM%252C_%253BmSMu0R5R8pFaMM%252CXh9h5NG7W7e09M%252C_%253BaVwJk6LrHCDfBM%252CD64VzJTaYmDt2M%252C_%253BuUyP883SE5rp9M%252C4XtAz-QMaEgs8M%252C_%253BQC-TAJeuo6rmKM%252C4XtAz-QMaEgs8M%252C_%253BAgRzkVHcX2t-IM%252C6KisFWxt8XzYrM%252C_%253Bw5ccxtFjNhM5IM%252CmpuYVX2UxO66tM%252C_%253B-B5nnjkDCJuvGM%252CyaVnAF4-vlFPyM%252C_%253B7Eevj2RU-QjflM%252CsX5aI_z9cZJnMM%252C_%253B86urWm1lqtyeSM%252CWNBYeuMGtuFUTM%252C_&usg=AI4_-kTGD1WEog-471YPpvSUrN_1ooTgHw&sa=X&ved=2ahUKEwiKttDFopv7AhVFFlkFHVInCMMQ9AF6BAheEAA#imgrc=w5ccxtFjNhM5IM",
+      "source": "https://www.lieferando.de/thetakeaway/beste-halal-hamburg/",
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFQfeJkAfw4sfYx6f12ciPCu8QE0eOL3_XFWaqSzRyhg&s"
+    },
+    {
+      "link": "https://www.google.de/search?source=univ&tbm=isch&q=halal+stores&gl=de&hl=de&fir=MLzU8TRyQ6aSmM%252CuZI6hag7mzmxFM%252C_%253BmSMu0R5R8pFaMM%252CXh9h5NG7W7e09M%252C_%253BaVwJk6LrHCDfBM%252CD64VzJTaYmDt2M%252C_%253BuUyP883SE5rp9M%252C4XtAz-QMaEgs8M%252C_%253BQC-TAJeuo6rmKM%252C4XtAz-QMaEgs8M%252C_%253BAgRzkVHcX2t-IM%252C6KisFWxt8XzYrM%252C_%253Bw5ccxtFjNhM5IM%252CmpuYVX2UxO66tM%252C_%253B-B5nnjkDCJuvGM%252CyaVnAF4-vlFPyM%252C_%253B7Eevj2RU-QjflM%252CsX5aI_z9cZJnMM%252C_%253B86urWm1lqtyeSM%252CWNBYeuMGtuFUTM%252C_&usg=AI4_-kTGD1WEog-471YPpvSUrN_1ooTgHw&sa=X&ved=2ahUKEwiKttDFopv7AhVFFlkFHVInCMMQ9AF6BAhdEAA#imgrc=-B5nnjkDCJuvGM",
+      "source": "https://www.tariqhalalmeats.com/",
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7muPLuL2fLVSGvMn3NMl9FwT0T0My147FZg8acvWwDg&s"
+    },
+    {
+      "link": "https://www.google.de/search?source=univ&tbm=isch&q=halal+stores&gl=de&hl=de&fir=MLzU8TRyQ6aSmM%252CuZI6hag7mzmxFM%252C_%253BmSMu0R5R8pFaMM%252CXh9h5NG7W7e09M%252C_%253BaVwJk6LrHCDfBM%252CD64VzJTaYmDt2M%252C_%253BuUyP883SE5rp9M%252C4XtAz-QMaEgs8M%252C_%253BQC-TAJeuo6rmKM%252C4XtAz-QMaEgs8M%252C_%253BAgRzkVHcX2t-IM%252C6KisFWxt8XzYrM%252C_%253Bw5ccxtFjNhM5IM%252CmpuYVX2UxO66tM%252C_%253B-B5nnjkDCJuvGM%252CyaVnAF4-vlFPyM%252C_%253B7Eevj2RU-QjflM%252CsX5aI_z9cZJnMM%252C_%253B86urWm1lqtyeSM%252CWNBYeuMGtuFUTM%252C_&usg=AI4_-kTGD1WEog-471YPpvSUrN_1ooTgHw&sa=X&ved=2ahUKEwiKttDFopv7AhVFFlkFHVInCMMQ9AF6BAhZEAA#imgrc=7Eevj2RU-QjflM",
+      "source": "https://www.youtube.com/watch?v=tcDw0We0W3o",
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4PTRZV6UGBKcx0tH_qUdp84r15dRSFKkleoP_F2l3ag&s"
+    },
+    {
+      "link": "https://www.google.de/search?source=univ&tbm=isch&q=halal+stores&gl=de&hl=de&fir=MLzU8TRyQ6aSmM%252CuZI6hag7mzmxFM%252C_%253BmSMu0R5R8pFaMM%252CXh9h5NG7W7e09M%252C_%253BaVwJk6LrHCDfBM%252CD64VzJTaYmDt2M%252C_%253BuUyP883SE5rp9M%252C4XtAz-QMaEgs8M%252C_%253BQC-TAJeuo6rmKM%252C4XtAz-QMaEgs8M%252C_%253BAgRzkVHcX2t-IM%252C6KisFWxt8XzYrM%252C_%253Bw5ccxtFjNhM5IM%252CmpuYVX2UxO66tM%252C_%253B-B5nnjkDCJuvGM%252CyaVnAF4-vlFPyM%252C_%253B7Eevj2RU-QjflM%252CsX5aI_z9cZJnMM%252C_%253B86urWm1lqtyeSM%252CWNBYeuMGtuFUTM%252C_&usg=AI4_-kTGD1WEog-471YPpvSUrN_1ooTgHw&sa=X&ved=2ahUKEwiKttDFopv7AhVFFlkFHVInCMMQ9AF6BAhcEAA#imgrc=86urWm1lqtyeSM",
+      "source": "https://mrandmrshalal.com/halal-restaurants-in-berlin/",
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScTsEGfsULucuqWYXMNbBGBvXpWac51oF8tMveTF6Leg&s"
+    }
+  ],
+  "inline_images_suggested_searches": [
+    {
+      "name": "restaurant amsterdam",
+      "link": "https://www.google.de/search?hl=de&gl=de&q=halal+stores&tbm=isch&chips=q:halal+stores,online_chips:restaurant+amsterdam:s8QtlM48x74%3D&usg=AI4_-kRRaooR44tHYVAEB-Jn4l1c8aRX8Q&sa=X&ved=2ahUKEwiKttDFopv7AhVFFlkFHVInCMMQgIoDKAB6BAhMEBE",
+      "chips": "q:halal+stores,online_chips:restaurant+amsterdam:s8QtlM48x74%3D",
+      "serpapi_link": "https://serpapi.com/search.json?chips=q%3Ahalal%2Bstores%2Conline_chips%3Arestaurant%2Bamsterdam%3As8QtlM48x74%253D&device=desktop&engine=google&gl=de&google_domain=google.de&hl=de&location=Berlin%2C+Berlin%2C+Germany&q=halal+stores",
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrCZbOJwO_T3rYatqfuc57rhKoa1YIWvX74Dv6fb7T47_cAqzNn6nSxJvedg&s"
+    },
+    {
+      "name": "berlin",
+      "link": "https://www.google.de/search?hl=de&gl=de&q=halal+stores&tbm=isch&chips=q:halal+stores,online_chips:berlin:0x_rwZ_zosk%3D&usg=AI4_-kSHQKnjeR1Q9x-1kibyFCgL271Viw&sa=X&ved=2ahUKEwiKttDFopv7AhVFFlkFHVInCMMQgIoDKAF6BAhMEBU",
+      "chips": "q:halal+stores,online_chips:berlin:0x_rwZ_zosk%3D",
+      "serpapi_link": "https://serpapi.com/search.json?chips=q%3Ahalal%2Bstores%2Conline_chips%3Aberlin%3A0x_rwZ_zosk%253D&device=desktop&engine=google&gl=de&google_domain=google.de&hl=de&location=Berlin%2C+Berlin%2C+Germany&q=halal+stores",
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWmKMtMxN2FDi7L_fElt1qJiCwGqnSlYS5PmBy8qigxYObYPmnEVsvjULlfg&s"
+    },
+    {
+      "name": "frankfurt",
+      "link": "https://www.google.de/search?hl=de&gl=de&q=halal+stores&tbm=isch&chips=q:halal+stores,online_chips:frankfurt:qqOulwCTL0A%3D&usg=AI4_-kQ0ShhqyfXRgH5K-MvtZD_PsnJoVQ&sa=X&ved=2ahUKEwiKttDFopv7AhVFFlkFHVInCMMQgIoDKAJ6BAhMEBk",
+      "chips": "q:halal+stores,online_chips:frankfurt:qqOulwCTL0A%3D",
+      "serpapi_link": "https://serpapi.com/search.json?chips=q%3Ahalal%2Bstores%2Conline_chips%3Afrankfurt%3AqqOulwCTL0A%253D&device=desktop&engine=google&gl=de&google_domain=google.de&hl=de&location=Berlin%2C+Berlin%2C+Germany&q=halal+stores",
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZ4JHmdafB2KRBonSa4wBqGTUT8I2KDO1cuCmknjUMrQLkP44X8KfOIW55KA&s"
+    },
+    {
+      "name": "singapore halal",
+      "link": "https://www.google.de/search?hl=de&gl=de&q=halal+stores&tbm=isch&chips=q:halal+stores,online_chips:singapore+halal:md34af5VsR0%3D&usg=AI4_-kRrxyF2xl74DZ5fE8UxN19kTTXUFQ&sa=X&ved=2ahUKEwiKttDFopv7AhVFFlkFHVInCMMQgIoDKAN6BAhMEB0",
+      "chips": "q:halal+stores,online_chips:singapore+halal:md34af5VsR0%3D",
+      "serpapi_link": "https://serpapi.com/search.json?chips=q%3Ahalal%2Bstores%2Conline_chips%3Asingapore%2Bhalal%3Amd34af5VsR0%253D&device=desktop&engine=google&gl=de&google_domain=google.de&hl=de&location=Berlin%2C+Berlin%2C+Germany&q=halal+stores",
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7t4HDWD3jO37CVNfzM_JON-zJmwVgVkt7IA6VPMf5YSSjtbxZUl038ykQ6g&s"
+    },
+    {
+      "name": "haram",
+      "link": "https://www.google.de/search?hl=de&gl=de&q=halal+stores&tbm=isch&chips=q:halal+stores,online_chips:haram:kfJRHtEuI5k%3D&usg=AI4_-kQ95JJqVt3DoblILX4rI4nQgo2MGA&sa=X&ved=2ahUKEwiKttDFopv7AhVFFlkFHVInCMMQgIoDKAR6BAhMECE",
+      "chips": "q:halal+stores,online_chips:haram:kfJRHtEuI5k%3D",
+      "serpapi_link": "https://serpapi.com/search.json?chips=q%3Ahalal%2Bstores%2Conline_chips%3Aharam%3AkfJRHtEuI5k%253D&device=desktop&engine=google&gl=de&google_domain=google.de&hl=de&location=Berlin%2C+Berlin%2C+Germany&q=halal+stores",
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_Dp6ajb0CF20RzlGv5_8Wil2GdRDRQ20IeoASaef6-D9aKG4IwkymcTX4CQ&s"
+    },
+    {
+      "name": "islam",
+      "link": "https://www.google.de/search?hl=de&gl=de&q=halal+stores&tbm=isch&chips=q:halal+stores,online_chips:islam:9WDdpy-SaFo%3D&usg=AI4_-kT8_nS6_SRHJa9_NB1kzf7TCfIpsA&sa=X&ved=2ahUKEwiKttDFopv7AhVFFlkFHVInCMMQgIoDKAV6BAhMECU",
+      "chips": "q:halal+stores,online_chips:islam:9WDdpy-SaFo%3D",
+      "serpapi_link": "https://serpapi.com/search.json?chips=q%3Ahalal%2Bstores%2Conline_chips%3Aislam%3A9WDdpy-SaFo%253D&device=desktop&engine=google&gl=de&google_domain=google.de&hl=de&location=Berlin%2C+Berlin%2C+Germany&q=halal+stores",
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTq9K2geAQNswIBQaknUclYseBKJAmRwsXATpOibg4gnjoPV_F0KCib2Xh2g&s"
+    },
+    {
+      "name": "chicken",
+      "link": "https://www.google.de/search?hl=de&gl=de&q=halal+stores&tbm=isch&chips=q:halal+stores,online_chips:chicken:qAso4g0o2Eo%3D&usg=AI4_-kQdQ1HFLN1jxDazm5CFar3iagRfKw&sa=X&ved=2ahUKEwiKttDFopv7AhVFFlkFHVInCMMQgIoDKAZ6BAhMECk",
+      "chips": "q:halal+stores,online_chips:chicken:qAso4g0o2Eo%3D",
+      "serpapi_link": "https://serpapi.com/search.json?chips=q%3Ahalal%2Bstores%2Conline_chips%3Achicken%3AqAso4g0o2Eo%253D&device=desktop&engine=google&gl=de&google_domain=google.de&hl=de&location=Berlin%2C+Berlin%2C+Germany&q=halal+stores",
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfmA5dMgiTj3iIWzhwEtW2iiDXqHQJViq87ak3rdowPI5uWV4igY0ttgsLjQ&s"
+    },
+    {
+      "name": "food",
+      "link": "https://www.google.de/search?hl=de&gl=de&q=halal+stores&tbm=isch&chips=q:halal+stores,online_chips:food:69SwyOangp0%3D&usg=AI4_-kSULTYsvEWNy7a-8q40PKxfMhNwoA&sa=X&ved=2ahUKEwiKttDFopv7AhVFFlkFHVInCMMQgIoDKAd6BAhMEC0",
+      "chips": "q:halal+stores,online_chips:food:69SwyOangp0%3D",
+      "serpapi_link": "https://serpapi.com/search.json?chips=q%3Ahalal%2Bstores%2Conline_chips%3Afood%3A69SwyOangp0%253D&device=desktop&engine=google&gl=de&google_domain=google.de&hl=de&location=Berlin%2C+Berlin%2C+Germany&q=halal+stores",
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOWoife6In3JSlr2jXGHAjWjsEgULxsQ_WuuDQhOyByM0CCNrhupLNCIphDg&s"
+    },
+    {
+      "name": "islamic",
+      "link": "https://www.google.de/search?hl=de&gl=de&q=halal+stores&tbm=isch&chips=q:halal+stores,online_chips:islamic:IBzropMJXGk%3D&usg=AI4_-kQ2uHAIUomNYdBgcWsj02brSCtUiQ&sa=X&ved=2ahUKEwiKttDFopv7AhVFFlkFHVInCMMQgIoDKAh6BAhMEDE",
+      "chips": "q:halal+stores,online_chips:islamic:IBzropMJXGk%3D",
+      "serpapi_link": "https://serpapi.com/search.json?chips=q%3Ahalal%2Bstores%2Conline_chips%3Aislamic%3AIBzropMJXGk%253D&device=desktop&engine=google&gl=de&google_domain=google.de&hl=de&location=Berlin%2C+Berlin%2C+Germany&q=halal+stores",
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbhwcTtF4cjkgwftWEzvVEk3a8qNC_N-Ukw8BJzIvGVg&s"
+    },
+    {
+      "name": "burger",
+      "link": "https://www.google.de/search?hl=de&gl=de&q=halal+stores&tbm=isch&chips=q:halal+stores,online_chips:burger:mhPSzfOPTLk%3D&usg=AI4_-kQvgE-H6njykHBFPS0xsrTdhIu_GA&sa=X&ved=2ahUKEwiKttDFopv7AhVFFlkFHVInCMMQgIoDKAl6BAhMEDU",
+      "chips": "q:halal+stores,online_chips:burger:mhPSzfOPTLk%3D",
+      "serpapi_link": "https://serpapi.com/search.json?chips=q%3Ahalal%2Bstores%2Conline_chips%3Aburger%3AmhPSzfOPTLk%253D&device=desktop&engine=google&gl=de&google_domain=google.de&hl=de&location=Berlin%2C+Berlin%2C+Germany&q=halal+stores",
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgMVI7C0z9inT_VwbXOF7-13us9fvOIMLtSJYbJnFjcQ&s"
+    },
+    {
+      "name": "halal certification",
+      "link": "https://www.google.de/search?hl=de&gl=de&q=halal+stores&tbm=isch&chips=q:halal+stores,online_chips:halal+certification&usg=AI4_-kTA6AKzqF28OWJb8UjAcTw7AAkasw&sa=X&ved=2ahUKEwiKttDFopv7AhVFFlkFHVInCMMQgIoDKAp6BAhMEDk",
+      "chips": "q:halal+stores,online_chips:halal+certification",
+      "serpapi_link": "https://serpapi.com/search.json?chips=q%3Ahalal%2Bstores%2Conline_chips%3Ahalal%2Bcertification&device=desktop&engine=google&gl=de&google_domain=google.de&hl=de&location=Berlin%2C+Berlin%2C+Germany&q=halal+stores"
+    },
+    {
+      "name": "best halal",
+      "link": "https://www.google.de/search?hl=de&gl=de&q=halal+stores&tbm=isch&chips=q:halal+stores,online_chips:best+halal:bR0sp_1rI8E%3D&usg=AI4_-kSx4BiXD9Ucu1X4QYY6ruCXc1zONw&sa=X&ved=2ahUKEwiKttDFopv7AhVFFlkFHVInCMMQgIoDKAt6BAhMEDw",
+      "chips": "q:halal+stores,online_chips:best+halal:bR0sp_1rI8E%3D",
+      "serpapi_link": "https://serpapi.com/search.json?chips=q%3Ahalal%2Bstores%2Conline_chips%3Abest%2Bhalal%3AbR0sp_1rI8E%253D&device=desktop&engine=google&gl=de&google_domain=google.de&hl=de&location=Berlin%2C+Berlin%2C+Germany&q=halal+stores",
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTg_g8Tnm-_Vx8GtDdY-G4WnwAhkjRnFym8xOpYjpsUKg&s"
+    },
+    {
+      "name": "essen",
+      "link": "https://www.google.de/search?hl=de&gl=de&q=halal+stores&tbm=isch&chips=q:halal+stores,online_chips:essen:pRLiiGso4JA%3D&usg=AI4_-kQPCcnQ7a1ZEf5UJZmswYLyoZXu8w&sa=X&ved=2ahUKEwiKttDFopv7AhVFFlkFHVInCMMQgIoDKAx6BAhMEEA",
+      "chips": "q:halal+stores,online_chips:essen:pRLiiGso4JA%3D",
+      "serpapi_link": "https://serpapi.com/search.json?chips=q%3Ahalal%2Bstores%2Conline_chips%3Aessen%3ApRLiiGso4JA%253D&device=desktop&engine=google&gl=de&google_domain=google.de&hl=de&location=Berlin%2C+Berlin%2C+Germany&q=halal+stores",
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpuwxNquuSvrYm5hFbVNOJuilO75zpbuRUIQ7jOFdQ9A&s"
+    }
+  ],
+  "related_questions": [
+    {
+      "question": "Welche Gummibärchen sind halal?",
+      "snippet": "Die Gummibärchen Altin Ayicik Fruchtgummis der Firma Haribo gibt es jetzt als Halal Variante. In dieser Variante enthalten die Fruchtgummis Rindergelatine.",
+      "title": "Haribo - Goldbären Gummibärchen 500g Halal | Delizh.de, 3,49 €",
+      "link": "https://www.delizh.de/Haribo-Goldbaeren-Gummibaerchen-500g-Halal",
+      "displayed_link": "https://www.delizh.de › Haribo-Goldbaeren-Gummibaerc...",
+      "next_page_token": "eyJvbnMiOiI2MjAiLCJmYyI6IkVxRUJDbUpCUVhSV2JHSkVVRzlSTW5sdmVUSm5VMXBQUWxWdVlrTk5PRWd5T0RoQlFtVkdUbkpLV1hKaWRrWkNhbkU0UW10bVkwSnlMWHBQY0VoM2RWZHBVa2RGYVVaSVJIRkRlVVJHVUdscVRHNWxiVGs1VDNwWVMxSkpNbTFoZGxsWGNHUllVUklYYUZrMWIxazRjbVpJVFZkek5VNXZVREJ6Tm1kdFFYY2FJa0ZFVlhsRlIyWmplV3gxYWpKYVdIaExSMFJyTWxOa1EzVnJibUpwVG14Qk9VRSIsImZjdiI6IjMiLCJlaSI6ImhZNW9ZOHJmSE1XczVOb1AwczZnbUF3IiwicWMiOiJDZ3hvWVd4aGJDQnpkRzl5WlhNUUJYMjQ4XzAtIiwicXVlc3Rpb24iOiJXZWxjaGUgR3VtbWliw6RyY2hlbiBzaW5kIGhhbGFsPyIsImxrIjoiR2g5M1pXeGphR1VnWjNWdGJXbGl3NlJ5WTJobGJpQnphVzVrSUdoaGJHRnMiLCJicyI6ImMtTlM1VklJVDgxSnpraFZjQ19OemMxTU9yeWtDTWpKVXlqT3pFdFJ5RWpNU2N5eGx6aHR6YVhBSlIyZW1KZW5rRmxjb3BDYW1hY1FVSlNmVXBwZEFsT3hMbFNBRVFBIn0=",
+      "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=google_related_questions&google_domain=google.com&next_page_token=eyJvbnMiOiI2MjAiLCJmYyI6IkVxRUJDbUpCUVhSV2JHSkVVRzlSTW5sdmVUSm5VMXBQUWxWdVlrTk5PRWd5T0RoQlFtVkdUbkpLV1hKaWRrWkNhbkU0UW10bVkwSnlMWHBQY0VoM2RWZHBVa2RGYVVaSVJIRkRlVVJHVUdscVRHNWxiVGs1VDNwWVMxSkpNbTFoZGxsWGNHUllVUklYYUZrMWIxazRjbVpJVFZkek5VNXZVREJ6Tm1kdFFYY2FJa0ZFVlhsRlIyWmplV3gxYWpKYVdIaExSMFJyTWxOa1EzVnJibUpwVG14Qk9VRSIsImZjdiI6IjMiLCJlaSI6ImhZNW9ZOHJmSE1XczVOb1AwczZnbUF3IiwicWMiOiJDZ3hvWVd4aGJDQnpkRzl5WlhNUUJYMjQ4XzAtIiwicXVlc3Rpb24iOiJXZWxjaGUgR3VtbWliw6RyY2hlbiBzaW5kIGhhbGFsPyIsImxrIjoiR2g5M1pXeGphR1VnWjNWdGJXbGl3NlJ5WTJobGJpQnphVzVrSUdoaGJHRnMiLCJicyI6ImMtTlM1VklJVDgxSnpraFZjQ19OemMxTU9yeWtDTWpKVXlqT3pFdFJ5RWpNU2N5eGx6aHR6YVhBSlIyZW1KZW5rRmxjb3BDYW1hY1FVSlNmVXBwZEFsT3hMbFNBRVFBIn0%3D"
+    },
+    {
+      "question": "Wann ist ein Produkt halal?",
+      "snippet": "Gläubige Muslime essen und trinken nur Lebensmittel, die nach den islamischen Speisegeboten „halal“ (erlaubt) sind. Dazu zählen alle pflanzlichen Lebensmittel und Fleisch von religiös geschlachteten Tieren. Absolut verboten (haram) sind Alkohol und Schweinefleisch.",
+      "title": "Halal-Ernährung - Wie steckt dahinter? - Verbraucherportal Bayern",
+      "link": "https://www.vis.bayern.de/essen_trinken/ernaehrungsformen/halal.htm",
+      "displayed_link": "https://www.vis.bayern.de › ernaehrungsformen › halal",
+      "next_page_token": "eyJvbnMiOiI2MjAiLCJmYyI6IkVxRUJDbUpCUVhSV2JHSkVVRzlSTW5sdmVUSm5VMXBQUWxWdVlrTk5PRWd5T0RoQlFtVkdUbkpLV1hKaWRrWkNhbkU0UW10bVkwSnlMWHBQY0VoM2RWZHBVa2RGYVVaSVJIRkRlVVJHVUdscVRHNWxiVGs1VDNwWVMxSkpNbTFoZGxsWGNHUllVUklYYUZrMWIxazRjbVpJVFZkek5VNXZVREJ6Tm1kdFFYY2FJa0ZFVlhsRlIyWmplV3gxYWpKYVdIaExSMFJyTWxOa1EzVnJibUpwVG14Qk9VRSIsImZjdiI6IjMiLCJlaSI6ImhZNW9ZOHJmSE1XczVOb1AwczZnbUF3IiwicWMiOiJDZ3hvWVd4aGJDQnpkRzl5WlhNUUJYMjQ4XzAtIiwicXVlc3Rpb24iOiJXYW5uIGlzdCBlaW4gUHJvZHVrdCBoYWxhbD8iLCJsayI6IkdoUjNZVzV1SUdsemRDQmxjM05sYmlCb1lXeGhiQSIsImJzIjoiYy1OUzVWSUlUODFKemtoVmNDX056YzFNT3J5a0NNakpVeWpPekV0UnlFak1TY3l4bHpodHphWEFKUjJlbUplbmtGbGNvcENhbWFjUVVKU2ZVcHBkQWxPeExsU0FFUUEifQ==",
+      "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=google_related_questions&google_domain=google.com&next_page_token=eyJvbnMiOiI2MjAiLCJmYyI6IkVxRUJDbUpCUVhSV2JHSkVVRzlSTW5sdmVUSm5VMXBQUWxWdVlrTk5PRWd5T0RoQlFtVkdUbkpLV1hKaWRrWkNhbkU0UW10bVkwSnlMWHBQY0VoM2RWZHBVa2RGYVVaSVJIRkRlVVJHVUdscVRHNWxiVGs1VDNwWVMxSkpNbTFoZGxsWGNHUllVUklYYUZrMWIxazRjbVpJVFZkek5VNXZVREJ6Tm1kdFFYY2FJa0ZFVlhsRlIyWmplV3gxYWpKYVdIaExSMFJyTWxOa1EzVnJibUpwVG14Qk9VRSIsImZjdiI6IjMiLCJlaSI6ImhZNW9ZOHJmSE1XczVOb1AwczZnbUF3IiwicWMiOiJDZ3hvWVd4aGJDQnpkRzl5WlhNUUJYMjQ4XzAtIiwicXVlc3Rpb24iOiJXYW5uIGlzdCBlaW4gUHJvZHVrdCBoYWxhbD8iLCJsayI6IkdoUjNZVzV1SUdsemRDQmxjM05sYmlCb1lXeGhiQSIsImJzIjoiYy1OUzVWSUlUODFKemtoVmNDX056YzFNT3J5a0NNakpVeWpPekV0UnlFak1TY3l4bHpodHphWEFKUjJlbUplbmtGbGNvcENhbWFjUVVKU2ZVcHBkQWxPeExsU0FFUUEifQ%3D%3D"
+    }
+  ],
+  "organic_results": [
+    {
+      "position": 1,
+      "title": "Miralina's Halal Sweets - der führende Halal Candy Shop ...",
+      "link": "https://www.halal-online-shop.de/",
+      "displayed_link": "https://www.halal-online-shop.de",
+      "thumbnail": "https://serpapi.com/searches/63688e85ef7ddac01c0fb53a/images/d348cd2b2d53c6ec5d496eb05b9aaf42592fe674690bcb15543e3d4f82751ac4.jpeg",
+      "snippet": "Miralina's Halal Sweets bietet die weltweit größte Auswahl für halal Süßigkeiten. Ohne Schweinegelatine. Ohne Alkohol. Halal Zertifiziert . Hier bestellen.",
+      "snippet_highlighted_words": ["Halal", "halal", "Halal"],
+      "about_this_result": {},
+      "cached_page_link": "https://webcache.googleusercontent.com/search?q=cache:uZI6hag7mzkJ:https://www.halal-online-shop.de/&cd=10&hl=de&ct=clnk&gl=de",
+      "related_pages_link": "https://www.google.de/search?hl=de&gl=de&q=related:https://www.halal-online-shop.de/+halal+stores"
+    },
+    {
+      "position": 2,
+      "title": "Halal - Berlin - Wolt",
+      "link": "https://wolt.com/en/deu/berlin/category/halal",
+      "displayed_link": "https://wolt.com › berlin › category",
+      "thumbnail": "https://serpapi.com/searches/63688e85ef7ddac01c0fb53a/images/d348cd2b2d53c6ec5d496eb05b9aaf4297da65112bf0dfb5a0dbbc618aa6a62d.jpeg",
+      "snippet": "Berlin. You can change your delivery location here. Happy Wolting. Discovery Restaurants Stores · Discovery · Restaurants · Stores ...",
+      "snippet_highlighted_words": [
+        "Restaurants Stores",
+        "Restaurants",
+        "Stores"
+      ],
+      "about_this_result": {},
+      "cached_page_link": "https://webcache.googleusercontent.com/search?q=cache:EDgPOofDOIIJ:https://wolt.com/en/deu/berlin/category/halal&cd=11&hl=de&ct=clnk&gl=de"
+    },
+    {
+      "position": 3,
+      "title": "Meat-Fleisch-HALAL Archives - Tukwila",
+      "link": "https://tukwila.de/index.php/product-category/halal-meat/",
+      "displayed_link": "https://tukwila.de › product-category",
+      "thumbnail": "https://serpapi.com/searches/63688e85ef7ddac01c0fb53a/images/d348cd2b2d53c6ec5d496eb05b9aaf422512be65c3d1061ccc263a95045ee7a7.jpeg",
+      "snippet": "halal-meat, daily fresh Meat, Bakra ka Gosht, Mutton, Goat Meat, Lamm, Chicken, Hähnchen, Ziegenfleisch, Rinderfleisch, Beef, Fleisch mit Knocken.",
+      "snippet_highlighted_words": ["halal", "meat"],
+      "about_this_result": {},
+      "cached_page_link": "https://webcache.googleusercontent.com/search?q=cache:AgF-KG9158AJ:https://tukwila.de/index.php/product-category/halal-meat/&cd=12&hl=de&ct=clnk&gl=de"
+    },
+    {
+      "position": 4,
+      "title": "Finde und bewerte Halal Restaurants in Deutschland",
+      "link": "https://www.halalhelden.de/",
+      "displayed_link": "https://www.halalhelden.de",
+      "thumbnail": "https://serpapi.com/searches/63688e85ef7ddac01c0fb53a/images/d348cd2b2d53c6ec5d496eb05b9aaf42d54e15013445f109a53888d240e52309.jpeg",
+      "snippet": "Finde Halal Restaurants und andere Halal Orte auf Halalhelden. Mach jetzt mit! Finde und bewerte die besten Halal Restaurants in ganz Deutschland!",
+      "snippet_highlighted_words": ["Halal Restaurants", "Halal Restaurants"],
+      "about_this_result": {},
+      "cached_page_link": "https://webcache.googleusercontent.com/search?q=cache:oacBSaZy_78J:https://www.halalhelden.de/&cd=13&hl=de&ct=clnk&gl=de"
+    },
+    {
+      "position": 5,
+      "title": "Zabihah - Find halal restaurants near you with the original ...",
+      "link": "https://www.zabihah.com/",
+      "displayed_link": "https://www.zabihah.com",
+      "snippet": "User reviews and ratings of Halal restaurants, markets, businesses, groceries, and more.",
+      "snippet_highlighted_words": ["Halal restaurants"],
+      "about_this_result": {},
+      "cached_page_link": "https://webcache.googleusercontent.com/search?q=cache:DS2shTTATQkJ:https://www.zabihah.com/&cd=14&hl=de&ct=clnk&gl=de",
+      "related_pages_link": "https://www.google.de/search?hl=de&gl=de&q=related:https://www.zabihah.com/+halal+stores",
+      "related_results": [
+        {
+          "position": 1,
+          "title": "Halal places in Berlin, Germany - Zabihah - Zabihah",
+          "link": "https://www.zabihah.com/mob/sub/Germany/Berlin/AQf3owRxQY",
+          "displayed_link": "https://www.zabihah.com › sub › B...",
+          "snippet": "Halal places in Berlin, Germany - Zabihah - Find halal restaurants near you with the original Halal restaurant guide.",
+          "snippet_highlighted_words": [
+            "halal restaurants",
+            "Halal restaurant"
+          ],
+          "about_this_result": {},
+          "cached_page_link": "https://webcache.googleusercontent.com/search?q=cache:WkK1_9fCocQJ:https://www.zabihah.com/mob/sub/Germany/Berlin/AQf3owRxQY&cd=15&hl=de&ct=clnk&gl=de"
+        }
+      ]
+    },
+    {
+      "position": 6,
+      "title": "THE 10 BEST Halal Restaurants in Berlin - Tripadvisor",
+      "link": "https://www.tripadvisor.com/Restaurants-g187323-zfz10751-Berlin.html",
+      "displayed_link": "https://www.tripadvisor.com › Rest...",
+      "snippet": "Best Halal Restaurants in Berlin: See Tripadvisor traveler reviews of Halal Restaurants in Berlin.",
+      "snippet_highlighted_words": ["Halal Restaurants", "Halal Restaurants"],
+      "about_this_result": {},
+      "cached_page_link": "https://webcache.googleusercontent.com/search?q=cache:oxzwxd3y1pQJ:https://www.tripadvisor.com/Restaurants-g187323-zfz10751-Berlin.html&cd=16&hl=de&ct=clnk&gl=de",
+      "related_pages_link": "https://www.google.de/search?hl=de&gl=de&q=related:https://www.tripadvisor.com/Restaurants-g187323-zfz10751-Berlin.html+halal+stores",
+      "related_results": [
+        {
+          "position": 1,
+          "title": "5 Best Halal Restaurants in Mitte (Berlin) - TripAdvisor",
+          "link": "https://www.tripadvisor.com/Restaurants-g187323-zfn7281425-zfz10751-Berlin.html",
+          "displayed_link": "https://www.tripadvisor.com › Rest...",
+          "snippet": "Best Halal Restaurants in Mitte (Berlin): See 2619 Tripadvisor traveler reviews of Halal Restaurants in Mitte Berlin.",
+          "snippet_highlighted_words": [
+            "Halal Restaurants",
+            "Halal Restaurants"
+          ],
+          "about_this_result": {},
+          "cached_page_link": "https://webcache.googleusercontent.com/search?q=cache:X8x6zzIBWEcJ:https://www.tripadvisor.com/Restaurants-g187323-zfn7281425-zfz10751-Berlin.html&cd=17&hl=de&ct=clnk&gl=de"
+        }
+      ]
+    },
+    {
+      "position": 7,
+      "title": "Halal - Wikipedia",
+      "link": "https://en.wikipedia.org/wiki/Halal",
+      "displayed_link": "https://en.wikipedia.org › wiki › H...",
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_xKtJhmB8sI8HDeq8XIG7mzGS2ac1KsreQ_RH-Lpxonc8BAGncaAv&usqp=CAE&s",
+      "snippet": "The term halal is particularly associated with Islamic dietary laws and especially meat processed and prepared in accordance with those requirements.",
+      "snippet_highlighted_words": ["halal", "meat"],
+      "about_this_result": {},
+      "cached_page_link": "https://webcache.googleusercontent.com/search?q=cache:Xh9h5NG7W7cJ:https://en.wikipedia.org/wiki/Halal&cd=22&hl=de&ct=clnk&gl=de",
+      "related_pages_link": "https://www.google.de/search?hl=de&gl=de&q=related:https://en.wikipedia.org/wiki/Halal+halal+stores"
+    }
+  ],
+  "related_searches": [
+    {
+      "query": "halal süßigkeiten online shop",
+      "link": "https://www.google.de/search?hl=de&gl=de&q=Halal+S%C3%BC%C3%9Figkeiten+Online+Shop&sa=X&ved=2ahUKEwiKttDFopv7AhVFFlkFHVInCMMQ1QJ6BAguEAE"
+    },
+    {
+      "query": "halal online shop",
+      "link": "https://www.google.de/search?hl=de&gl=de&q=Halal+Online+Shop&sa=X&ved=2ahUKEwiKttDFopv7AhVFFlkFHVInCMMQ1QJ6BAgtEAE"
+    },
+    {
+      "query": "halal süßigkeiten shop",
+      "link": "https://www.google.de/search?hl=de&gl=de&q=Halal+S%C3%BC%C3%9Figkeiten+Shop&sa=X&ved=2ahUKEwiKttDFopv7AhVFFlkFHVInCMMQ1QJ6BAgrEAE"
+    },
+    {
+      "query": "halal online shop erfahrungen",
+      "link": "https://www.google.de/search?hl=de&gl=de&q=Halal+Online+Shop+Erfahrungen&sa=X&ved=2ahUKEwiKttDFopv7AhVFFlkFHVInCMMQ1QJ6BAgqEAE"
+    },
+    {
+      "query": "halal restaurant in der nähe",
+      "link": "https://www.google.de/search?hl=de&gl=de&q=Halal+Restaurant+in+der+N%C3%A4he&sa=X&ved=2ahUKEwiKttDFopv7AhVFFlkFHVInCMMQ1QJ6BAgpEAE"
+    },
+    {
+      "query": "halal süßigkeiten box",
+      "link": "https://www.google.de/search?hl=de&gl=de&q=Halal+S%C3%BC%C3%9Figkeiten+Box&sa=X&ved=2ahUKEwiKttDFopv7AhVFFlkFHVInCMMQ1QJ6BAgoEAE"
+    },
+    {
+      "query": "halal online shop rabattcode",
+      "link": "https://www.google.de/search?hl=de&gl=de&q=Halal+Online+Shop+Rabattcode&sa=X&ved=2ahUKEwiKttDFopv7AhVFFlkFHVInCMMQ1QJ6BAglEAE"
+    },
+    {
+      "query": "halal haribo",
+      "link": "https://www.google.de/search?hl=de&gl=de&q=Halal+Haribo&sa=X&ved=2ahUKEwiKttDFopv7AhVFFlkFHVInCMMQ1QJ6BAgjEAE"
+    }
+  ],
+  "pagination": {
+    "current": 1,
+    "next": "https://www.google.de/search?q=halal+stores&hl=de&gl=de&ei=hY5oY8rfHMWs5NoP0s6gmAw&start=10&sa=N&ved=2ahUKEwiKttDFopv7AhVFFlkFHVInCMMQ8NMDegQIBhAW",
+    "other_pages": {
+      "https://www.google.de/search?q=halal+stores&hl=de&gl=de&ei=hY5oY8rfHMWs5NoP0s6gmAw&start=10&sa=N&ved=2ahUKEwiKttDFopv7AhVFFlkFHVInCMMQ8tMDegQIBhAE": "",
+      "https://www.google.de/search?q=halal+stores&hl=de&gl=de&ei=hY5oY8rfHMWs5NoP0s6gmAw&start=20&sa=N&ved=2ahUKEwiKttDFopv7AhVFFlkFHVInCMMQ8tMDegQIBhAG": "",
+      "https://www.google.de/search?q=halal+stores&hl=de&gl=de&ei=hY5oY8rfHMWs5NoP0s6gmAw&start=30&sa=N&ved=2ahUKEwiKttDFopv7AhVFFlkFHVInCMMQ8tMDegQIBhAI": "",
+      "https://www.google.de/search?q=halal+stores&hl=de&gl=de&ei=hY5oY8rfHMWs5NoP0s6gmAw&start=40&sa=N&ved=2ahUKEwiKttDFopv7AhVFFlkFHVInCMMQ8tMDegQIBhAK": "",
+      "https://www.google.de/search?q=halal+stores&hl=de&gl=de&ei=hY5oY8rfHMWs5NoP0s6gmAw&start=50&sa=N&ved=2ahUKEwiKttDFopv7AhVFFlkFHVInCMMQ8tMDegQIBhAM": "",
+      "https://www.google.de/search?q=halal+stores&hl=de&gl=de&ei=hY5oY8rfHMWs5NoP0s6gmAw&start=60&sa=N&ved=2ahUKEwiKttDFopv7AhVFFlkFHVInCMMQ8tMDegQIBhAO": "",
+      "https://www.google.de/search?q=halal+stores&hl=de&gl=de&ei=hY5oY8rfHMWs5NoP0s6gmAw&start=70&sa=N&ved=2ahUKEwiKttDFopv7AhVFFlkFHVInCMMQ8tMDegQIBhAQ": "",
+      "https://www.google.de/search?q=halal+stores&hl=de&gl=de&ei=hY5oY8rfHMWs5NoP0s6gmAw&start=80&sa=N&ved=2ahUKEwiKttDFopv7AhVFFlkFHVInCMMQ8tMDegQIBhAS": "",
+      "https://www.google.de/search?q=halal+stores&hl=de&gl=de&ei=hY5oY8rfHMWs5NoP0s6gmAw&start=90&sa=N&ved=2ahUKEwiKttDFopv7AhVFFlkFHVInCMMQ8tMDegQIBhAU": ""
+    }
+  },
+  "serpapi_pagination": {
+    "current": 1,
+    "next_link": "https://serpapi.com/search.json?device=desktop&engine=google&gl=de&google_domain=google.de&hl=de&location=Berlin%2C+Berlin%2C+Germany&q=halal+stores&start=10",
+    "next": "https://serpapi.com/search.json?device=desktop&engine=google&gl=de&google_domain=google.de&hl=de&location=Berlin%2C+Berlin%2C+Germany&q=halal+stores&start=10",
+    "other_pages": {
+      "https://serpapi.com/search.json?device=desktop&engine=google&gl=de&google_domain=google.de&hl=de&location=Berlin%2C+Berlin%2C+Germany&q=halal+stores&start=10": "",
+      "https://serpapi.com/search.json?device=desktop&engine=google&gl=de&google_domain=google.de&hl=de&location=Berlin%2C+Berlin%2C+Germany&q=halal+stores&start=20": "",
+      "https://serpapi.com/search.json?device=desktop&engine=google&gl=de&google_domain=google.de&hl=de&location=Berlin%2C+Berlin%2C+Germany&q=halal+stores&start=30": "",
+      "https://serpapi.com/search.json?device=desktop&engine=google&gl=de&google_domain=google.de&hl=de&location=Berlin%2C+Berlin%2C+Germany&q=halal+stores&start=40": "",
+      "https://serpapi.com/search.json?device=desktop&engine=google&gl=de&google_domain=google.de&hl=de&location=Berlin%2C+Berlin%2C+Germany&q=halal+stores&start=50": "",
+      "https://serpapi.com/search.json?device=desktop&engine=google&gl=de&google_domain=google.de&hl=de&location=Berlin%2C+Berlin%2C+Germany&q=halal+stores&start=60": "",
+      "https://serpapi.com/search.json?device=desktop&engine=google&gl=de&google_domain=google.de&hl=de&location=Berlin%2C+Berlin%2C+Germany&q=halal+stores&start=70": "",
+      "https://serpapi.com/search.json?device=desktop&engine=google&gl=de&google_domain=google.de&hl=de&location=Berlin%2C+Berlin%2C+Germany&q=halal+stores&start=80": "",
+      "https://serpapi.com/search.json?device=desktop&engine=google&gl=de&google_domain=google.de&hl=de&location=Berlin%2C+Berlin%2C+Germany&q=halal+stores&start=90": ""
+    }
+  }
+}

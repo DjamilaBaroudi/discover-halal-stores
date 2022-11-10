@@ -39,6 +39,17 @@
   z-index: 1;
 }
 
+
+.cardLayout {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  column-gap: 1.5rem /* 24px */;
+  row-gap: 1.5rem /* 24px */;
+}
+
+.card {
+  justify-content: center;
+}
 /** Breakpoints:
   sm: min-width: 640px;
   md: min-width: 768px;
