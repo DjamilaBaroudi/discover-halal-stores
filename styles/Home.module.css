@@ -50,6 +50,18 @@
 .card {
   justify-content: center;
 }
+
+.heading2{
+  font-size: 2.5rem;
+  line-height: 2.25rem;
+  padding-bottom: 2rem;
+  margin-top: 2.5rem;
+  color: var(--var-text-white-100);
+  background-image: repeating-linear-gradient(#140049, #ea9afc);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
 /** Breakpoints:
   sm: min-width: 640px;
   md: min-width: 768px;

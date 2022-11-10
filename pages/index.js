@@ -3,12 +3,12 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import Banner from '../components/banner'
 import Card from '../components/card'
-import HalalStores from '../data/halal-stores.json';
+import halalStoresData from '../data/halal-stores.json';
 
 export async function getStaticProps(context) {
   return {
     props: {
-      HalalStores,
+       halalStoresData,
     },
   };
 }
@@ -18,7 +18,7 @@ export default function Home(props) {
     e.target.innerHTML = 'Loading ...';
   }
 
-  const halalStores = props.HalalStores.local_results.places;
+  const halalStores = props.halalStoresData.local_results.places;
 
   return (
     <div className={styles.container}>
@@ -33,23 +33,27 @@ export default function Home(props) {
         {/*      <div className={styles.heroImage}>
           <Image src='/static/hero-image.png' alt='hero image' width={700} height={400} />
         </div> */}
-        <div className={styles.cardLayout}>
-          {halalStores.map(store => {
-            return (
-              <Card
-                key={store.place_id}
-                name={store.title}
-                imgUrl={store.image_url}
-                href={`/halal-store/${store.place_id}`}
-                className={styles.card}
-              >
-              </Card>
-            )
-          })
-          }
+        {halalStores.length > 0 && <div>
+          <h2 className={styles.heading2}> Berlin Stores </h2>
+          <div className={styles.cardLayout}>
+            {halalStores.map(store => {
+              return (
+                <Card
+                  key={store.place_id}
+                  name={store.title}
+                  imgUrl={store.image_url}
+                  href={`/halal-store/${store.place_id}`}
+                  className={styles.card}
+                >
+                </Card>
+              )
+            })
+            }
 
 
+          </div>
         </div>
+        }
       </main>
 
     </div>

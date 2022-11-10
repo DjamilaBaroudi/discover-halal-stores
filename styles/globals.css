@@ -61,6 +61,7 @@ button:focus{
     }
 :root{
   --var-text-white: rgb(255, 255, 255);
+  --var-text-white-100: rgb(229, 231, 235, 1);
   --var-text-blue: rgb(29, 29, 73); 
   --var-text-violet: rgb(29, 32, 73); 
 }

@@ -76,8 +76,8 @@
         "rating": 3.7,
         "reviews": 36,
         "type": "Lebensmittelhändler",
-        "hours": "Frankfurter Allee 71-77 · 030 89065336",
-        "address": "3,7(36) · Lebensmittelhändler",
+        "address": "Frankfurter Allee 71-77 · 030 89065336",
+        "evaluation": "3,7(36) · Lebensmittelhändler",
         "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipNaAHiaMEYJ530AnkployGi3aJSHaF6tKKhpSPl=w92-h92-n-k-no",
         "image_url": "https://unsplash.com/photos/kr_88BakygA"
       },
@@ -91,8 +91,8 @@
         "rating": 4.5,
         "reviews": 38,
         "type": "Lebensmittelhändler",
-        "hours": "Ernststraße 68 · 0176 47108204",
-        "address": "4,5(38) · Lebensmittelhändler",
+        "address": "Ernststraße 68 · 0176 47108204",
+        "evaluation": "4,5(38) · Lebensmittelhändler",
         "thumbnail": "https://serpapi.com/searches/63688e85ef7ddac01c0fb53a/images/4af49212d0210133e0c8e56cc210b47080d8c9fcc4add293dd5e9d1273bdb85c34fc3a03ebb5395e.jpeg",
         "image_url": "https://serpapi.com/searches/63688e85ef7ddac01c0fb53a/images/4af49212d0210133e0c8e56cc210b47080d8c9fcc4add293dd5e9d1273bdb85c34fc3a03ebb5395e.jpeg"
 
@@ -107,10 +107,25 @@
         "rating": 4.4,
         "reviews": 130,
         "type": "Lebensmittelhändler",
-        "hours": "Warnitzer Str. 6",
-        "address": "4,4(130) · Lebensmittelhändler",
+        "address": "Warnitzer Str. 6",
+        "evaluation": "4,4(130) · Lebensmittelhändler",
         "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipOpZZ-yKI4qx5yk-90Y0uVDvhN7Jx70GGlVJdnM=w92-h92-n-k-no",
         "image_url": "https://pr0.nicelocal.com.de/Nq8aR2nAi-RlgDFDHomC4w/2000x1500,q75/4px-BW84_n0QJGVPszge3NRBsKw-2VcOifrJIjPYFYkOtaCZxxXQ2TgTQGUf_G-nONFzciAH0HDfu_U4KNmXLagPvgvCX41nyS0tUWJPjRbneleTtZyKlQ"
+      },
+      {
+        "position": 4,
+        "title": "Router HALAL 200",
+        "place_id": "200",
+        "lsig": "AB86z5UnONdmeAjdSABb9pSa2zKn",
+        "place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=de&google_domain=google.de&hl=de&location=Berlin%2C+Berlin%2C+Germany&lsig=AB86z5UnONdmeAjdSABb9pSa2zKn&ludocid=4086392656995363413&q=halal+stores&tbm=lcl",
+        "description": "Einkaufen im Geschäft",
+        "rating": 3.7,
+        "reviews": 36,
+        "type": "Lebensmittelhändler",
+        "address": "adress for router 200",
+        "evaluation": "3,7(36) · Lebensmittelhändler",
+        "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipNaAHiaMEYJ530AnkployGi3aJSHaF6tKKhpSPl=w92-h92-n-k-no",
+        "image_url": "https://unsplash.com/photos/kr_88BakygA"
       }
     ]
   },
