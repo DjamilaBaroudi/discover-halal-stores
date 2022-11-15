@@ -4,11 +4,11 @@ import styles from '../styles/Home.module.css'
 import Banner from '../components/banner'
 import Card from '../components/card'
 import { fetchHalalStores } from '../lib/halal-stores'
+import useTrackLocation from '../hooks/use-track-location'
 
 export async function getStaticProps(context) {
   
   const halalStoresData = await fetchHalalStores();
-
   return {
     props: {
       halalStoresData,
@@ -17,8 +17,11 @@ export async function getStaticProps(context) {
 }
 
 export default function Home(props) {
-  const handleOnBannerBtnClick = (e) => {
-    e.target.innerHTML = 'Loading ...';
+  const { latLong, locationErrorMessage, handleTrackLocation, isFindingLocation } = useTrackLocation();
+  console.log({ isFindingLocation });
+  const handleOnBannerBtnClick = () => {
+    handleTrackLocation();
+    console.log({ latLong });
   }
 
   const halalStores = props.halalStoresData;
@@ -32,7 +35,7 @@ export default function Home(props) {
       </Head>
 
       <main className={styles.main}>
-        <Banner buttonText={'View stores nearby'} handleOnClick={handleOnBannerBtnClick} />
+        <Banner buttonText={isFindingLocation ? 'loading...' : 'View stores nearby'} handleOnClick={handleOnBannerBtnClick} />
         {/*      <div className={styles.heroImage}>
           <Image src='/static/hero-image.png' alt='hero image' width={700} height={400} />
         </div> */}
