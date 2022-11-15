@@ -3,12 +3,15 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import Banner from '../components/banner'
 import Card from '../components/card'
-import halalStoresData from '../data/halal-stores.json';
+import { fetchHalalStores } from '../lib/halal-stores'
 
 export async function getStaticProps(context) {
+  
+  const halalStoresData = await fetchHalalStores();
+
   return {
     props: {
-       halalStoresData,
+      halalStoresData,
     },
   };
 }
@@ -18,7 +21,7 @@ export default function Home(props) {
     e.target.innerHTML = 'Loading ...';
   }
 
-  const halalStores = props.halalStoresData.local_results.places;
+  const halalStores = props.halalStoresData;
 
   return (
     <div className={styles.container}>
@@ -39,10 +42,10 @@ export default function Home(props) {
             {halalStores.map(store => {
               return (
                 <Card
-                  key={store.place_id}
-                  name={store.title}
+                  key={store.fsq_id}
+                  name={store.name}
                   imgUrl={store.image_url}
-                  href={`/halal-store/${store.place_id}`}
+                  href={`/halal-store/${store.fsq_id}`}
                   className={styles.card}
                 >
                 </Card>
@@ -59,3 +62,17 @@ export default function Home(props) {
     </div>
   )
 }
+/* 
+const options = {
+  method: 'GET',
+  headers: {
+    accept: 'application/json',
+    Authorization: 'fsq3tHCJ6KdWW6xCNFUTrWxlNcyKItBez/q95podJlzEp7w='
+  }
+};
+
+fetch('https://api.foursquare.com/v3/places/search?query=halal&ll=52.520007%2C13.404954&radius=5000&limit=50&session_token=MAIVP0ANFIC1Q2OR3CQW0W3OZTM3RY4PEWCRYLC3QSU1KZCY', options)
+  .then(response => response.json())
+  .then(response => console.log(response))
+  .catch(err => console.error(err));
+*/
