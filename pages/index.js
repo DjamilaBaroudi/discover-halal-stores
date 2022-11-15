@@ -62,17 +62,3 @@ export default function Home(props) {
     </div>
   )
 }
-/* 
-const options = {
-  method: 'GET',
-  headers: {
-    accept: 'application/json',
-    Authorization: 'fsq3tHCJ6KdWW6xCNFUTrWxlNcyKItBez/q95podJlzEp7w='
-  }
-};
-
-fetch('https://api.foursquare.com/v3/places/search?query=halal&ll=52.520007%2C13.404954&radius=5000&limit=50&session_token=MAIVP0ANFIC1Q2OR3CQW0W3OZTM3RY4PEWCRYLC3QSU1KZCY', options)
-  .then(response => response.json())
-  .then(response => console.log(response))
-  .catch(err => console.error(err));
-*/

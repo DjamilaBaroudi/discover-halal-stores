@@ -11,12 +11,12 @@ import { fetchHalalStores } from "../../lib/halal-stores";
 
 export async function getStaticProps({ params }) {
     const halalStoresData = await fetchHalalStores();
-
+    console.log(halalStoresData);
     return {
         props: {
             halalStore: halalStoresData
                 .find((halalStore => {
-                    return halalStore.fsq_id === params.id
+                    return halalStore.id === params.id
                 }))
         }
     }
@@ -27,7 +27,7 @@ export async function getStaticPaths() {
     const paths = halalStoresData.map(halalStore => {
         return {
             params: {
-                id: halalStore.fsq_id
+                id: halalStore.id
             }
         }
     });
@@ -41,7 +41,7 @@ const HalalStore = (props) => {
     if (router.isFallback) {
         return <div> Loading ... </div>
     }
-    const { name, location, image_url, evaluation } = props.halalStore;
+    const { name, address, image_url } = props.halalStore;
     const handleVoteButton = () => {
         console.log("up vote");
     }
@@ -54,7 +54,7 @@ const HalalStore = (props) => {
                 <div className={styles.col1}>
                     <div className={styles.backToHomeLink}>
                         <Link href="/">
-                            <a>  Back to home </a>
+                            <a> ← Back to home </a>
                         </Link>
                     </div>
                     <div className={styles.nameWrapper}>
@@ -70,10 +70,10 @@ const HalalStore = (props) => {
                 <div className={cls("glass", styles.col2)}>
                     <div className={styles.iconWrapper}>
                         <LocationOnIcon/>
-                        <p className={styles.text}>{location.address}</p>
+                        <p className={styles.text}>{address}</p>
                     </div>
                     <div className={styles.iconWrapper}>
-                        <ReviewsIcon/>
+                        <ReviewsIcon />
                     </div>
                     <button
                         className={styles.upvoteButton}
