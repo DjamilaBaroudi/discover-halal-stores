@@ -7,22 +7,27 @@ import styles from '../../styles/halal-store.module.css';
 import cls from 'classnames';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import ReviewsIcon from '@mui/icons-material/Reviews';
+import { fetchHalalStores } from "../../lib/halal-stores";
 
-export function getStaticProps({ params }) {
+export async function getStaticProps({ params }) {
+    const halalStoresData = await fetchHalalStores();
+
     return {
         props: {
-            halalStore: halalStoresData.local_results.places
+            halalStore: halalStoresData
                 .find((halalStore => {
-                    return halalStore.place_id === params.id
+                    return halalStore.fsq_id === params.id
                 }))
         }
     }
 }
-export function getStaticPaths() {
-    const paths = halalStoresData.local_results.places.map(halalStore => {
+export async function getStaticPaths() {
+    const halalStoresData = await fetchHalalStores();
+
+    const paths = halalStoresData.map(halalStore => {
         return {
             params: {
-                id: halalStore.place_id
+                id: halalStore.fsq_id
             }
         }
     });
@@ -36,14 +41,14 @@ const HalalStore = (props) => {
     if (router.isFallback) {
         return <div> Loading ... </div>
     }
-    const { title, address, image_url, evaluation } = props.halalStore;
+    const { name, location, image_url, evaluation } = props.halalStore;
     const handleVoteButton = () => {
         console.log("up vote");
     }
     return (
         <div>
             <Head>
-                <title>{title}</title>
+                <title>{name}</title>
             </Head>
             <div className={styles.container}>
                 <div className={styles.col1}>
@@ -53,23 +58,22 @@ const HalalStore = (props) => {
                         </Link>
                     </div>
                     <div className={styles.nameWrapper}>
-                        <p className={styles.name}>{title}</p>
+                        <p className={styles.name}>{name}</p>
                     </div>
                     <Image
                         src={image_url}
                         width={600}
                         height={360}
-                        alt={title}
+                        alt={name}
                         className={styles.storeImage}></Image>
                 </div>
                 <div className={cls("glass", styles.col2)}>
                     <div className={styles.iconWrapper}>
                         <LocationOnIcon/>
-                        <p className={styles.text}>{address}</p>
+                        <p className={styles.text}>{location.address}</p>
                     </div>
                     <div className={styles.iconWrapper}>
                         <ReviewsIcon/>
-                        <p className={styles.text}>{evaluation}</p>
                     </div>
                     <button
                         className={styles.upvoteButton}
