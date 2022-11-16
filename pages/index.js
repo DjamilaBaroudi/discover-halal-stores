@@ -7,7 +7,7 @@ import { fetchHalalStores } from '../lib/halal-stores'
 import useTrackLocation from '../hooks/use-track-location'
 
 export async function getStaticProps(context) {
-  
+
   const halalStoresData = await fetchHalalStores();
   return {
     props: {
@@ -42,28 +42,28 @@ export default function Home(props) {
         {/*      <div className={styles.heroImage}>
           <Image src='/static/hero-image.png' alt='hero image' width={700} height={400} />
         </div> */}
-       {locationErrorMessage && `Something went wrong: ${locationErrorMessage}`}
-        {halalStores.length > 0 && <div>
-          <h2 className={styles.heading2}> Berlin Stores </h2>
-          <div className={styles.cardLayout}>
-            {halalStores.map(store => {
-              return (
-                <Card
-                  key={store.id}
-                  name={store.name}
-                  imgUrl={store.image_url}
-                  href={`/halal-store/${store.id}`}
-                  className={styles.card}
-                >
-                </Card>
-              )
-            })
-            }
+        {locationErrorMessage && <p> Something went wrong: {locationErrorMessage} </p>}
 
-
+        {halalStores.length > 0 && (
+          <div className={styles.sectionWrapper}>
+            <h2 className={styles.heading2}> Berlin Stores </h2>
+            <div className={styles.cardLayout}>
+              {halalStores.map(store => {
+                return (
+                  <Card
+                    key={store.id}
+                    name={store.name}
+                    imgUrl={store.image_url}
+                    href={`/halal-store/${store.id}`}
+                    className={styles.card}
+                  >
+                  </Card>
+                )
+              })
+              }
+            </div>
           </div>
-        </div>
-        }
+        )}
       </main>
 
     </div>
