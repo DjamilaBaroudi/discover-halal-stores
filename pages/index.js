@@ -6,7 +6,7 @@ import Card from '../components/card'
 import { fetchHalalStores } from '../lib/halal-stores'
 import useTrackLocation from '../hooks/use-track-location'
 import { useEffect, useContext } from 'react'
-import { ACTION_TYPES, StoreContext } from './_app'
+import { ACTION_TYPES, StoreContext } from '../store/store-context'
 
 export async function getStaticProps(context) {
 
@@ -71,9 +71,30 @@ export default function Home(props) {
 
         {halalStores.length > 0 && (
           <div className={styles.sectionWrapper}>
-            <h2 className={styles.heading2}> Berlin Stores </h2>
+            <h2 className={styles.heading2}> Stores near me </h2>
             <div className={styles.cardLayout}>
               {halalStores.map(store => {
+                return (
+                  <Card
+                    key={store.id}
+                    name={store.name}
+                    imgUrl={store.image_url}
+                    href={`/halal-store/${store.id}`}
+                    className={styles.card}
+                  >
+                  </Card>
+                )
+              })
+              }
+            </div>
+          </div>
+        )}
+
+      {props.halalStoresData.length > 0 && (
+          <div className={styles.sectionWrapper}>
+            <h2 className={styles.heading2}> Berlin Stores </h2>
+            <div className={styles.cardLayout}>
+              {props.halalStoresData.map(store => {
                 return (
                   <Card
                     key={store.id}
