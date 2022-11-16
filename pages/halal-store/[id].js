@@ -11,13 +11,13 @@ import { fetchHalalStores } from "../../lib/halal-stores";
 
 export async function getStaticProps({ params }) {
     const halalStoresData = await fetchHalalStores();
-    console.log(halalStoresData);
+    const foundStores = halalStoresData
+    .find((halalStore => {
+        return halalStore.id === params.id
+    }))
     return {
         props: {
-            halalStore: halalStoresData
-                .find((halalStore => {
-                    return halalStore.id === params.id
-                }))
+            halalStore: foundStores ? foundStores : {}
         }
     }
 }
