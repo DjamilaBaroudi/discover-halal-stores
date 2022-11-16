@@ -5,7 +5,8 @@ import Banner from '../components/banner'
 import Card from '../components/card'
 import { fetchHalalStores } from '../lib/halal-stores'
 import useTrackLocation from '../hooks/use-track-location'
-import { useEffect, useState } from 'react'
+import { useEffect, useContext } from 'react'
+import { ACTION_TYPES, StoreContext } from './_app'
 
 export async function getStaticProps(context) {
 
@@ -18,8 +19,11 @@ export async function getStaticProps(context) {
 }
 
 export default function Home(props) {
-  const { latLong, locationErrorMessage, handleTrackLocation, isFindingLocation } = useTrackLocation();
-  const [fetchedStores, setFetchedStores] = useState(props.halalStoresData);
+  const { locationErrorMessage, handleTrackLocation, isFindingLocation } = useTrackLocation();
+
+  
+  const { dispatch, state } = useContext(StoreContext);
+  const { halalStores, latLong } = state;
 
   const handleOnBannerBtnClick = () => {
     handleTrackLocation();
@@ -30,8 +34,13 @@ export default function Home(props) {
     if (latLong) {
       try {
         const fetchedHalalStores = await fetchHalalStores(latLong, 30);
-        console.log(fetchedHalalStores);
-        setFetchedStores(fetchedHalalStores);
+        //setFetchedStores(fetchedHalalStores);
+        dispatch({
+          type: ACTION_TYPES.SET_HALAL_STORES,
+          payload: {
+            halalStores: fetchedHalalStores
+        } 
+        })
       }
       catch(error){
         console.log(error);
@@ -42,7 +51,6 @@ export default function Home(props) {
     fetchStoresNearBy();
   }, [latLong])
 
-  const halalStores = fetchedStores;
 
   return (
     <div className={styles.container}>
