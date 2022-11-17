@@ -5,7 +5,7 @@ import Banner from '../components/banner'
 import Card from '../components/card'
 import { fetchHalalStores } from '../lib/halal-stores'
 import useTrackLocation from '../hooks/use-track-location'
-import { useEffect, useContext } from 'react'
+import { useEffect, useContext, useState } from 'react'
 import { ACTION_TYPES, StoreContext } from '../store/store-context'
 
 export async function getStaticProps(context) {
@@ -20,7 +20,7 @@ export async function getStaticProps(context) {
 
 export default function Home(props) {
   const { locationErrorMessage, handleTrackLocation, isFindingLocation } = useTrackLocation();
-
+  const [storesErrorMessage, setStoresErrorMessage] = useState(null);
   
   const { dispatch, state } = useContext(StoreContext);
   const { halalStores, latLong } = state;
@@ -33,17 +33,21 @@ export default function Home(props) {
     async function fetchStoresNearBy () {
     if (latLong) {
       try {
-        const fetchedHalalStores = await fetchHalalStores(latLong, 30);
+        const response = await fetch(`/api/getHalalStoresByLocation?latLong=${latLong}&limit=30`);
         //setFetchedStores(fetchedHalalStores);
+        const halalStores = await response.json();
         dispatch({
           type: ACTION_TYPES.SET_HALAL_STORES,
           payload: {
-            halalStores: fetchedHalalStores
+            halalStores
         } 
         })
+        setStoresErrorMessage('');
       }
+      
       catch(error){
         console.log(error);
+        setStoresErrorMessage(error);
         //setError
       }
       }
@@ -68,6 +72,7 @@ export default function Home(props) {
           <Image src='/static/hero-image.png' alt='hero image' width={700} height={400} />
         </div> */}
         {locationErrorMessage && <p> Something went wrong: {locationErrorMessage} </p>}
+        {storesErrorMessage && <p>Something went wrong: {storesErrorMessage}</p>}
 
         {halalStores.length > 0 && (
           <div className={styles.sectionWrapper}>

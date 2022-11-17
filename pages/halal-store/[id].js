@@ -8,6 +8,9 @@ import cls from 'classnames';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import ReviewsIcon from '@mui/icons-material/Reviews';
 import { fetchHalalStores } from "../../lib/halal-stores";
+import { useContext, useEffect, useState } from "react";
+import { StoreContext } from "../../store/store-context";
+import { isEmpty } from "../../utils";
 
 export async function getStaticProps({ params }) {
     const halalStoresData = await fetchHalalStores();
@@ -36,12 +39,31 @@ export async function getStaticPaths() {
         fallback: true,
     }
 }
-const HalalStore = (props) => {
+const HalalStore = (initialProps) => {
     const router = useRouter();
+
+    const id = router.query.id;
+    const [halalStore, setHalalStore] = useState(initialProps.halalStore);
+    const { state: { halalStores } } = useContext(StoreContext);
+    
+
+    useEffect(() => {
+        if (isEmpty(initialProps.halalStore)) {
+            if (halalStores.length > 0) {
+                const foundStoreById = halalStores
+                    .find((halalStore => {
+                        return halalStore.id === id
+                    }))
+                setHalalStore(foundStoreById);
+            }
+        }
+    }, [id])
+
     if (router.isFallback) {
         return <div> Loading ... </div>
     }
-    const { name, address, image_url } = props.halalStore;
+
+    const { name, address, image_url } = halalStore;
     const handleVoteButton = () => {
         console.log("up vote");
     }
