@@ -1,10 +1,9 @@
-const Airtable = require('airtable');
+/* const Airtable = require('airtable');
 const base = new Airtable({ apiKey: process.env.AIRTABLE_API_KEY })
-    .base(process.env.AIRTABLE_BASE_KEY);
+    .base(process.env.AIRTABLE_BASE_KEY); */
+import { table, getMinifiedRecords } from '../../lib/airtable'
 
-const table = base('halal-stores');
 
-console.log({ table });
 
 const createHalalStore = async (req, res) => {
     // find a record
@@ -13,12 +12,11 @@ const createHalalStore = async (req, res) => {
         try {
             if (id) {
                 const findHalalStoreRecords = await table.select({
-                    filterByFormula: `id=${id}`
-                }).firstPage
-                if (findHalalStoreRecords.length !== 0) {
-                    const records = findHalalStoreRecords.map(record => {
-                        return ({ ...record.fields });
-                    })
+                    filterByFormula: `id="${id}"`
+                }).firstPage();
+
+                if (findHalalStoreRecords.length > 0) {
+                    const records = getMinifiedRecords(findHalalStoreRecords);
                     res.json(records);
                 }
                 else {
@@ -36,11 +34,7 @@ const createHalalStore = async (req, res) => {
                                 image_url
                             }
                         }]);
-                        const records = createdRecords.map(record => {
-                            return ({
-                                ...record.fields
-                            })
-                        })
+                        const records = getMinifiedRecords(createdRecords)
                         res.json(records)
                     }
                     else {

@@ -17,9 +17,9 @@ import StoreIcon from '@mui/icons-material/Store';
 export async function getStaticProps({ params }) {
     const halalStoresData = await fetchHalalStores();
     const foundStores = halalStoresData
-    .find((halalStore => {
-        return halalStore.id === params.id
-    }))
+        .find((halalStore => {
+            return halalStore.id === params.id
+        }))
     return {
         props: {
             halalStore: foundStores ? foundStores : {}
@@ -47,28 +47,59 @@ const HalalStore = (initialProps) => {
     const id = router.query.id;
     const [halalStore, setHalalStore] = useState(initialProps.halalStore);
     const { state: { halalStores } } = useContext(StoreContext);
-    
 
+    const handleCreateHalalStore = async (halalStore) => {
+        const { id, name, address, neighborhood, category, review, rating, image_url }
+            = halalStore;
+        try {
+            const response = await fetch('/api/createHalalStore', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    id,
+                    name,
+                    address: address || "",
+                    neighborhood: neighborhood || "",
+                    category: category || "",
+                    review,
+                    rating,
+                    image_url
+                })
+            });
+            const dbHalalStores = response.json();
+            console.log({ dbHalalStores });
+        } catch (error) {
+            console.error("An error has occured when creating a store", err)
+        }
+    }
     useEffect(() => {
         if (isEmpty(initialProps.halalStore)) {
             if (halalStores.length > 0) {
-                const foundStoreById = halalStores
+                const foundStoreByIdFromContext = halalStores
                     .find((halalStore => {
                         return halalStore.id === id
                     }))
-                setHalalStore(foundStoreById);
+                if (foundStoreByIdFromContext) {
+                    setHalalStore(foundStoreByIdFromContext);
+                    handleCreateHalalStore(foundStoreByIdFromContext);
+                }
             }
+        } else {
+            handleCreateHalalStore(initialProps.halalStore);
         }
-    }, [id])
+    }, [id, initialProps, initialProps.halalStore])
 
+    const [rating, setRating] = useState(1);
+    const [value, setValue] = useState(1);
+    console.log(value);
     if (router.isFallback) {
         return <div> Loading ... </div>
     }
 
     const { name, address, image_url, neighborhood, category } = halalStore;
-    const handleVoteButton = () => {
-        console.log("up vote");
-    }
+
     return (
         <div>
             <Head>
@@ -93,7 +124,7 @@ const HalalStore = (initialProps) => {
                 </div>
                 <div className={cls("glass", styles.col2)}>
                     <div className={styles.iconWrapper}>
-                        <NearMeIcon/>
+                        <NearMeIcon />
                         <p className={styles.text}>{address}</p>
                     </div>
                     {neighborhood &&
@@ -102,7 +133,7 @@ const HalalStore = (initialProps) => {
                             <p className={styles.text}>{neighborhood}</p>
                         </div>
                     }
-                     {category &&
+                    {category &&
                         <div className={styles.iconWrapper}>
                             <StoreIcon />
                             <p className={styles.smallText}>{category}</p>
@@ -110,13 +141,12 @@ const HalalStore = (initialProps) => {
                     }
                     <div className={styles.iconWrapper}>
                         <ReviewsIcon />
-                        <p className={styles.ratingText}> 3 </p>
+                        <p className={styles.ratingText}> {rating} </p>
                     </div>
-                   {/*  <button
-                        className={styles.upvoteButton}
-                        onClick={handleVoteButton}> Up Vote!
-                    </button> */}
-                    <StarRating/>
+
+                    <StarRating value={value} onChange={(event, newValue) => {
+                        setValue(newValue);
+                    }} />
                 </div>
             </div>
         </div>

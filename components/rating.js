@@ -25,7 +25,7 @@ const StarRating = (props) => {
         <div className={styles.container}>
             <StyledRating
                 name="customized-color"
-                defaultValue={1}
+                defaultValue={0}
                 getLabelText={(value) => `${value} Star${value !== 1 ? 's' : ''}`}
                 precision={0.5}
                 icon={<StarIcon fontSize="inherit" />}
