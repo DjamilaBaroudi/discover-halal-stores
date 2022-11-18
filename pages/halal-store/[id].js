@@ -5,12 +5,14 @@ import Head from "next/head";
 import styles from '../../styles/halal-store.module.css';
 import cls from 'classnames';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
+import NearMeIcon from '@mui/icons-material/NearMe';
 import ReviewsIcon from '@mui/icons-material/Reviews';
 import { fetchHalalStores } from "../../lib/halal-stores";
 import { useContext, useEffect, useState } from "react";
 import { StoreContext } from "../../store/store-context";
 import { isEmpty } from "../../utils";
 import StarRating from "../../components/rating";
+import StoreIcon from '@mui/icons-material/Store';
 
 export async function getStaticProps({ params }) {
     const halalStoresData = await fetchHalalStores();
@@ -63,7 +65,7 @@ const HalalStore = (initialProps) => {
         return <div> Loading ... </div>
     }
 
-    const { name, address, image_url } = halalStore;
+    const { name, address, image_url, neighborhood, category } = halalStore;
     const handleVoteButton = () => {
         console.log("up vote");
     }
@@ -91,17 +93,30 @@ const HalalStore = (initialProps) => {
                 </div>
                 <div className={cls("glass", styles.col2)}>
                     <div className={styles.iconWrapper}>
-                        <LocationOnIcon/>
+                        <NearMeIcon/>
                         <p className={styles.text}>{address}</p>
                     </div>
+                    {neighborhood &&
+                        <div className={styles.iconWrapper}>
+                            <LocationOnIcon />
+                            <p className={styles.text}>{neighborhood}</p>
+                        </div>
+                    }
+                     {category &&
+                        <div className={styles.iconWrapper}>
+                            <StoreIcon />
+                            <p className={styles.smallText}>{category}</p>
+                        </div>
+                    }
                     <div className={styles.iconWrapper}>
                         <ReviewsIcon />
+                        <p className={styles.ratingText}> 3 </p>
                     </div>
                    {/*  <button
                         className={styles.upvoteButton}
                         onClick={handleVoteButton}> Up Vote!
                     </button> */}
-                    <StarRating></StarRating>
+                    <StarRating/>
                 </div>
             </div>
         </div>

@@ -76,6 +76,23 @@
     margin: 0;
     font-weight: 700;
   }
+
+  .smallText {
+    padding-left: 0.5rem /* 8px */;
+    font-size: 1.3rem /* 24px */;
+    line-height: 2rem /* 32px */;
+    margin: 0;
+    font-style: italic;
+    font-weight: 600;
+  }
+
+  .ratingText {
+    padding-left: 0.5rem /* 8px */;
+    font-size: 1.3rem /* 24px */;
+    line-height: 2rem /* 32px */;
+    margin: 0;
+    font-weight: 600;
+  }
   
   .upvoteButton {
     width: fit-content;
