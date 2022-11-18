@@ -1,7 +1,6 @@
 import { useRouter } from "next/router";
 import Link from "next/link";
 import Image from "next/image";
-import halalStoresData from "../../data/halal-stores.json";
 import Head from "next/head";
 import styles from '../../styles/halal-store.module.css';
 import cls from 'classnames';
@@ -11,6 +10,7 @@ import { fetchHalalStores } from "../../lib/halal-stores";
 import { useContext, useEffect, useState } from "react";
 import { StoreContext } from "../../store/store-context";
 import { isEmpty } from "../../utils";
+import StarRating from "../../components/rating";
 
 export async function getStaticProps({ params }) {
     const halalStoresData = await fetchHalalStores();
@@ -97,10 +97,11 @@ const HalalStore = (initialProps) => {
                     <div className={styles.iconWrapper}>
                         <ReviewsIcon />
                     </div>
-                    <button
+                   {/*  <button
                         className={styles.upvoteButton}
                         onClick={handleVoteButton}> Up Vote!
-                    </button>
+                    </button> */}
+                    <StarRating></StarRating>
                 </div>
             </div>
         </div>
