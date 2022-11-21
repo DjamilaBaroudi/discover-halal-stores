@@ -63,8 +63,8 @@ const HalalStore = (initialProps) => {
                     address: address || "",
                     neighborhood: neighborhood || "",
                     category: category || "",
-                    review,
-                    rating,
+                    review: review || 0.0,
+                    rating: rating || 0.0,
                     image_url
                 })
             });
@@ -91,14 +91,15 @@ const HalalStore = (initialProps) => {
         }
     }, [id, initialProps, initialProps.halalStore])
 
-    const [rating, setRating] = useState(1);
-    const [value, setValue] = useState(1);
+    const [ratingText, setRatingText] = useState(1);
+    const [value, setValue] = useState(0);
+    const getLabelText = () => { (value) => `${value} Star${value !== 1 ? 's' : ''}` }
     console.log(value);
     if (router.isFallback) {
         return <div> Loading ... </div>
     }
 
-    const { name, address, image_url, neighborhood, category } = halalStore;
+    const { name, address, image_url, neighborhood, category, review, rating } = halalStore;
 
     return (
         <div>
@@ -141,12 +142,13 @@ const HalalStore = (initialProps) => {
                     }
                     <div className={styles.iconWrapper}>
                         <ReviewsIcon />
-                        <p className={styles.ratingText}> {rating} </p>
+                        <p className={styles.ratingText}> {review ? review + rating : value} </p>
                     </div>
 
                     <StarRating value={value} onChange={(event, newValue) => {
                         setValue(newValue);
-                    }} />
+                    }}
+                        getLabelText={getLabelText} />
                 </div>
             </div>
         </div>
