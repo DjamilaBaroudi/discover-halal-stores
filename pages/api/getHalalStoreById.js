@@ -1,17 +1,12 @@
-import { table, getMinifiedRecords } from '../../lib/airtable'
+import { table, getMinifiedRecords, getRecordsByFilter } from '../../lib/airtable'
 
 const getHalalStoreById = async (req, res) => {
     
     const { id } = req.query;
     try {
         if (id) {
-            const findHalalStoreRecords = await table.select({
-                filterByFormula: `id="${id}"`
-            }).firstPage();
-        
-
-            if (findHalalStoreRecords.length > 0) {
-                const records = getMinifiedRecords(findHalalStoreRecords);
+            const records = await getRecordsByFilter(id);
+            if(records.length !== 0){
                 res.json(records);
             }
             else {
