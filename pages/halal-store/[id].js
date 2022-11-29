@@ -13,6 +13,7 @@ import { StoreContext } from "../../store/store-context";
 import { isEmpty } from "../../utils";
 import StarRating from "../../components/rating";
 import StoreIcon from '@mui/icons-material/Store';
+import useSWR from 'swr';
 
 export async function getStaticProps({ params }) {
     const halalStoresData = await fetchHalalStores();
@@ -91,15 +92,25 @@ const HalalStore = (initialProps) => {
         }
     }, [id, initialProps, initialProps.halalStore])
 
+
     const [ratingText, setRatingText] = useState(1);
     const [value, setValue] = useState(0);
     const getLabelText = () => { (value) => `${value} Star${value !== 1 ? 's' : ''}` }
-    console.log(value);
+
+    const { data, error } = useSWR(`/api/getHalalStoreById?id=${id}`);
+    useEffect(() => {
+        if (data && data.length > 0) {
+            setHalalStore(data[0]);
+            setValue(data[0].rating)
+            setRatingText(data[0].review);
+        }
+    }, [data])
+
     if (router.isFallback) {
         return <div> Loading ... </div>
     }
-
     const { name, address, image_url, neighborhood, category, review, rating } = halalStore;
+
 
     return (
         <div>
