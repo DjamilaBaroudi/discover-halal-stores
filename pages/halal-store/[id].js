@@ -70,7 +70,6 @@ const HalalStore = (initialProps) => {
                 })
             });
             const dbHalalStores = response.json();
-            console.log({ dbHalalStores });
         } catch (error) {
             console.error("An error has occured when creating a store", err)
         }
@@ -92,20 +91,26 @@ const HalalStore = (initialProps) => {
         }
     }, [id, initialProps, initialProps.halalStore])
 
-
     const [ratingText, setRatingText] = useState(1);
     const [value, setValue] = useState(0);
-    const getLabelText = () => { (value) => `${value} Star${value !== 1 ? 's' : ''}` }
+    const getLabelText = () => { (value) => `${value} Star${value !== 1 ? 's' : ''}` };
 
-    const { data, error } = useSWR(`/api/getHalalStoreById?id=${id}`);
+    const fetcher = (url) => fetch(url).then((res) => res.json());
+    const { data, error } = useSWR(`/api/getHalalStoreById?id=${id}`, fetcher);
+
     useEffect(() => {
         if (data && data.length > 0) {
+            console.log('data from swr', data);
             setHalalStore(data[0]);
             setValue(data[0].rating)
             setRatingText(data[0].review);
         }
     }, [data])
 
+
+    if (error) {
+        return <div>Something went wrong retrieving data!</div>
+    }
     if (router.isFallback) {
         return <div> Loading ... </div>
     }

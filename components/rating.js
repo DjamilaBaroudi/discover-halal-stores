@@ -1,5 +1,4 @@
 
-//import { FontAwesomeIcon } from '@fortawesome/react-fontawesom'
 import Rating from '@mui/material/Rating';
 import StarIcon from '@mui/icons-material/Star';
 import StarBorderIcon from '@mui/icons-material/StarBorder';
@@ -54,4 +53,4 @@ const StarRating = (props) => {
     )
 }
 
-export default StarRating
+export default StarRating;
