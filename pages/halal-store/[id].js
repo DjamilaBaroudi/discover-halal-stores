@@ -50,7 +50,7 @@ const HalalStore = (initialProps) => {
     const { state: { halalStores } } = useContext(StoreContext);
 
     const handleCreateHalalStore = async (halalStore) => {
-        const { id, name, address, neighborhood, category, review, rating, image_url }
+        const { id, name, address, neighborhood, category, averageRating, rating, image_url }
             = halalStore;
         try {
             const response = await fetch('/api/createHalalStore', {
@@ -64,7 +64,7 @@ const HalalStore = (initialProps) => {
                     address: address || "",
                     neighborhood: neighborhood || "",
                     category: category || "",
-                    review: review || 0.0,
+                    averageRating: averageRating || 0.0,
                     rating: rating || 0.0,
                     image_url
                 })
@@ -93,6 +93,7 @@ const HalalStore = (initialProps) => {
 
     const [ratingText, setRatingText] = useState(1);
     const [value, setValue] = useState(0);
+
     const getLabelText = () => { (value) => `${value} Star${value !== 1 ? 's' : ''}` };
 
     const fetcher = (url) => fetch(url).then((res) => res.json());
@@ -103,7 +104,7 @@ const HalalStore = (initialProps) => {
             console.log('data from swr', data);
             setHalalStore(data[0]);
             setValue(data[0].rating)
-            setRatingText(data[0].review);
+            setRatingText(data[0].averageRating);
         }
     }, [data])
 
@@ -114,8 +115,26 @@ const HalalStore = (initialProps) => {
     if (router.isFallback) {
         return <div> Loading ... </div>
     }
-    const { name, address, image_url, neighborhood, category, review, rating } = halalStore;
+    const { name, address, image_url, neighborhood, category, averageRating, rating } = halalStore;
 
+    const handleStoreRating = async (event, newValue) => {
+        try {
+            const response = await fetch('/api/favouriteHalalStoreById', {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    id,
+                    rating,
+                })
+            });
+            const dbHalalStores = response.json();
+            setValue(newValue);
+        } catch (error) {
+            console.error("An error has occured when creating a store", err)
+        }
+    }
 
     return (
         <div>
@@ -158,12 +177,10 @@ const HalalStore = (initialProps) => {
                     }
                     <div className={styles.iconWrapper}>
                         <ReviewsIcon />
-                        <p className={styles.ratingText}> {review ? review + rating : value} </p>
+                        <p className={styles.ratingText}> {averageRating ? averageRating + rating : value} </p>
                     </div>
 
-                    <StarRating value={value} onChange={(event, newValue) => {
-                        setValue(newValue);
-                    }}
+                    <StarRating value={value} onChange={handleStoreRating}
                         getLabelText={getLabelText} />
                 </div>
             </div>

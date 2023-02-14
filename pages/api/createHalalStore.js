@@ -7,7 +7,7 @@ import { table, getMinifiedRecords, getRecordsByFilter } from '../../lib/airtabl
 
 const createHalalStore = async (req, res) => {
     // find a record
-    const { id, name, address, neighborhood, category, review, rating, image_url } = req.body;
+    const { id, name, address, neighborhood, category, averageRating, rating, image_url } = req.body;
     if (req.method === 'POST') {
         try {
             if (id) {
@@ -25,7 +25,7 @@ const createHalalStore = async (req, res) => {
                                 address,
                                 neighborhood,
                                 category,
-                                review,
+                                averageRating: averageRating,
                                 rating,
                                 image_url
                             }
