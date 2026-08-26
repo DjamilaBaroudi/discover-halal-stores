@@ -1,11 +1,10 @@
-import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import StoreRatingClient from '@/components/store-rating-client';
 import { fetchHalalStores } from '@/lib/foursquare';
 import { getConvexClient, api } from '@/lib/convex-server';
-import { formatDistance } from '@/components/store-card';
+import { formatDistance, StoreImage } from '@/components/store-card';
 
 export const revalidate = 600;
 
@@ -63,15 +62,7 @@ export default async function HalalStorePage({
 
       {/* Hero image */}
       <div className="relative mt-6 aspect-[21/9] overflow-hidden rounded-3xl bg-stone-100 shadow-lg">
-        <Image
-          src={store.image_url}
-          alt={store.name}
-          fill
-          priority
-          sizes="(max-width: 1024px) 100vw, 1024px"
-          className="object-cover"
-          unoptimized
-        />
+        <StoreImage store={store} priority />
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
         <div className="absolute inset-x-0 bottom-0 p-6 sm:p-8">
           {store.category && (

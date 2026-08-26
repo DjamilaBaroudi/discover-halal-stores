@@ -1,9 +1,6 @@
-import { createApi } from 'unsplash-js';
 import type { HalalStore } from './types';
 
-const unsplash = createApi({
-  accessKey: process.env.UNSPLASH_ACCESS_KEY ?? '',
-});
+const UNSPLASH_ACCESS_KEY = process.env.UNSPLASH_ACCESS_KEY;
 
 interface FoursquarePlace {
   fsq_place_id: string;
@@ -20,10 +17,26 @@ interface FoursquarePlace {
 }
 
 async function getStorePhotos(query: string, count: number): Promise<string[]> {
+  if (!UNSPLASH_ACCESS_KEY) return [];
   try {
-    const response = await unsplash.search.getPhotos({ query, perPage: 40 });
-    const results = response.response?.results ?? [];
-    return results.map((r) => r.urls.regular);
+    const params = new URLSearchParams({
+      query,
+      per_page: String(count),
+      orientation: 'landscape',
+    });
+    const res = await fetch(
+      `https://api.unsplash.com/search/photos?${params}`,
+      {
+        headers: { Authorization: `Client-ID ${UNSPLASH_ACCESS_KEY}` },
+        next: { revalidate: 3600 },
+      }
+    );
+    if (!res.ok) return [];
+    const data: { results?: { urls?: { regular?: string } }[] } =
+      await res.json();
+    return (data.results ?? [])
+      .map((r) => r.urls?.regular)
+      .filter((url): url is string => Boolean(url));
   } catch {
     return [];
   }
@@ -40,29 +53,28 @@ export async function fetchHalalStores(options?: {
   const searchQuery = options?.query ?? 'halal';
   const limit = options?.limit ?? 12;
 
-  const photos = await getStorePhotos(
-    searchQuery === 'halal' ? 'halal food restaurant' : `${searchQuery} food`,
-    40
-  );
-
-  const params = new URLSearchParams({
-    query: searchQuery,
-    ll: latLong,
-    radius: '10000',
-    limit: String(limit),
-  });
-
-  const res = await fetch(
-    `https://places-api.foursquare.com/places/search?${params}`,
-    {
-      headers: {
-        accept: 'application/json',
-        Authorization: `Bearer ${process.env.FOURSQUARE_API_KEY ?? ''}`,
-        'X-Places-Api-Version': '2025-06-17',
-      },
-      next: { revalidate: 600 },
-    }
-  );
+  const [photos, res] = await Promise.all([
+    getStorePhotos(
+      searchQuery === 'halal' ? 'halal food restaurant' : `${searchQuery} food`,
+      Math.max(limit, 20)
+    ),
+    fetch(
+      `https://places-api.foursquare.com/places/search?${new URLSearchParams({
+        query: searchQuery,
+        ll: latLong,
+        radius: '10000',
+        limit: String(limit),
+      })}`,
+      {
+        headers: {
+          accept: 'application/json',
+          Authorization: `Bearer ${process.env.FOURSQUARE_API_KEY ?? ''}`,
+          'X-Places-Api-Version': '2025-06-17',
+        },
+        next: { revalidate: 600 },
+      }
+    ),
+  ]);
 
   if (!res.ok) {
     throw new Error(`Foursquare API error: ${res.status}`);
@@ -83,8 +95,6 @@ export async function fetchHalalStores(options?: {
     tel: venue.tel || undefined,
     website: venue.website || undefined,
     distance: venue.distance,
-    image_url:
-      photos[idx % Math.max(photos.length, 1)] ??
-      `https://placehold.co/600x360/15803d/ffffff?text=${encodeURIComponent(venue.name)}`,
+    image_url: photos.length > 0 ? photos[idx % photos.length] : undefined,
   }));
 }

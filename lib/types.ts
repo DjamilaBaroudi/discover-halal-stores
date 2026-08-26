@@ -4,7 +4,7 @@ export interface HalalStore {
   address: string;
   neighborhood?: string;
   category?: string;
-  image_url: string;
+  image_url?: string;
   distance?: number;
   tel?: string;
   website?: string;
