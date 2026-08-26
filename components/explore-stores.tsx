@@ -1,11 +1,16 @@
 'use client';
 
+import dynamic from 'next/dynamic';
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import clsx from 'clsx';
 import useTrackLocation from '@/hooks/use-track-location';
 import StoreCard from '@/components/store-card';
 import SearchBar from '@/components/search-bar';
 import type { HalalStore } from '@/lib/types';
+
+const StoresMap = dynamic(() => import('@/components/stores-map'), {
+  ssr: false,
+});
 
 type SortKey = 'distance' | 'name';
 
@@ -21,11 +26,11 @@ const FILTERS: Filter[] = [
   { label: 'Restaurants', emoji: '🍽️', query: 'halal restaurant' },
   { label: 'Brunch', emoji: '🍳', query: 'halal brunch' },
   { label: 'Groceries', emoji: '🛒', query: 'halal grocery' },
-  { label: 'Bakeries', emoji: '🥐', query: 'bakery' },
+  { label: 'Bakeries', emoji: '🥐', query: 'halal bakery' },
   { label: 'Butchers', emoji: '🥩', query: 'halal butcher' },
-  { label: 'Cafés', emoji: '☕', query: 'cafe' },
-  { label: 'Sweets', emoji: '🍰', query: 'dessert' },
-  { label: 'Spa & Wellness', emoji: '🧖', query: 'spa' },
+  { label: 'Cafés', emoji: '☕', query: 'halal cafe' },
+  { label: 'Sweets', emoji: '🍰', query: 'halal dessert' },
+  { label: 'Spa & Wellness', emoji: '🧖', query: 'halal spa' },
   { label: 'Mosques & Activities', emoji: '🕌', endpoint: '/api/activities' },
 ];
 
@@ -42,6 +47,7 @@ export default function ExploreStores({
   const [fetching, setFetching] = useState(false);
   const [activeFilter, setActiveFilter] = useState<string>('All');
   const [sort, setSort] = useState<SortKey>('distance');
+  const [view, setView] = useState<'list' | 'map'>('list');
 
   const load = useCallback(
     async (ll: string, filter: Filter) => {
@@ -136,8 +142,13 @@ export default function ExploreStores({
         </div>
       </div>
 
+      <p className="mt-3 text-center text-xs text-stone-400">
+        Places are found via &quot;halal&quot; searches and community data —
+        halal status isn&apos;t certified, please confirm with the venue.
+      </p>
+
       {(visible.length > 0 || fetching) && (
-        <div className="mt-6 flex items-center justify-between gap-4">
+        <div className="mt-6 flex flex-wrap items-center justify-between gap-3">
           <h2 className="text-lg font-bold tracking-tight">
             {fetching
               ? 'Loading…'
@@ -145,19 +156,44 @@ export default function ExploreStores({
                 ? `${visible.length} place${visible.length === 1 ? '' : 's'}`
                 : 'Popular near you'}
           </h2>
-          <select
-            value={sort}
-            onChange={(e) => setSort(e.target.value as SortKey)}
-            aria-label="Sort stores"
-            className="rounded-full bg-white px-3 py-1.5 text-sm font-medium text-stone-600 ring-1 ring-stone-200"
-          >
-            <option value="distance">Closest</option>
-            <option value="name">A–Z</option>
-          </select>
+          <div className="flex items-center gap-2">
+            <select
+              value={sort}
+              onChange={(e) => setSort(e.target.value as SortKey)}
+              aria-label="Sort stores"
+              className="rounded-full bg-white px-3 py-1.5 text-sm font-medium text-stone-600 ring-1 ring-stone-200"
+            >
+              <option value="distance">Closest</option>
+              <option value="name">A–Z</option>
+            </select>
+            <div className="flex rounded-full bg-white p-0.5 ring-1 ring-stone-200">
+              {(['list', 'map'] as const).map((v) => (
+                <button
+                  key={v}
+                  onClick={() => setView(v)}
+                  aria-pressed={view === v}
+                  className={clsx(
+                    'rounded-full px-4 py-1 text-sm font-medium capitalize transition',
+                    view === v
+                      ? 'bg-stone-900 text-white shadow'
+                      : 'text-stone-600 hover:text-stone-900'
+                  )}
+                >
+                  {v === 'list' ? '☰ List' : '🗺️ Map'}
+                </button>
+              ))}
+            </div>
+          </div>
         </div>
       )}
 
-      {visible.length > 0 && (
+      {visible.length > 0 && view === 'map' && (
+        <div className="mt-4 h-[65vh] min-h-[420px] overflow-hidden rounded-2xl shadow-sm ring-1 ring-stone-900/5">
+          <StoresMap stores={visible} userLocation={latLong} />
+        </div>
+      )}
+
+      {visible.length > 0 && view === 'list' && (
         <div className="mt-4 grid grid-cols-2 gap-x-4 gap-y-6 md:grid-cols-3 lg:grid-cols-4">
           {visible.map((store) => (
             <StoreCard key={store.id} store={store} />
@@ -165,7 +201,7 @@ export default function ExploreStores({
         </div>
       )}
 
-      {fetching && (
+      {fetching && view === 'list' && (
         <div
           className="mt-4 grid grid-cols-2 gap-x-4 gap-y-6 md:grid-cols-3 lg:grid-cols-4"
           aria-busy

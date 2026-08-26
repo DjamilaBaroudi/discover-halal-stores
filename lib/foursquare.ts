@@ -5,6 +5,8 @@ const UNSPLASH_ACCESS_KEY = process.env.UNSPLASH_ACCESS_KEY;
 interface FoursquarePlace {
   fsq_place_id: string;
   name: string;
+  latitude?: number;
+  longitude?: number;
   categories?: { name: string }[];
   location?: {
     formatted_address?: string;
@@ -95,6 +97,8 @@ export async function fetchHalalStores(options?: {
     tel: venue.tel || undefined,
     website: venue.website || undefined,
     distance: venue.distance,
+    lat: venue.latitude,
+    lng: venue.longitude,
     image_url: photos.length > 0 ? photos[idx % photos.length] : undefined,
   }));
 }

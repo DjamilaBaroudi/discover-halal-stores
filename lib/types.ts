@@ -6,6 +6,8 @@ export interface HalalStore {
   category?: string;
   image_url?: string;
   distance?: number;
+  lat?: number;
+  lng?: number;
   tel?: string;
   website?: string;
   averageRating?: number;

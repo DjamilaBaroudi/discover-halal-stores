@@ -109,6 +109,8 @@ function toStores(elements: OverpassElement[], lat: number, lng: number) {
         tel: tags.phone ?? tags['contact:phone'] ?? undefined,
         website: tags.website ?? tags['contact:website'] ?? undefined,
         distance: point ? haversine(lat, lng, point.lat, point.lon) : undefined,
+        lat: point?.lat,
+        lng: point?.lon,
       } satisfies HalalStore;
     })
     .sort((a, b) => (a.distance ?? Infinity) - (b.distance ?? Infinity));
