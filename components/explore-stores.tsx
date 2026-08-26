@@ -9,7 +9,7 @@ import type { HalalStore } from '@/lib/types';
 
 type SortKey = 'distance' | 'name';
 
-const FILTERS = [
+const FILTERS: { label: string; emoji: string; query: string | string[] }[] = [
   { label: 'All', emoji: '✨', query: 'halal' },
   { label: 'Restaurants', emoji: '🍽️', query: 'halal restaurant' },
   { label: 'Brunch', emoji: '🍳', query: 'halal brunch' },
@@ -19,7 +19,12 @@ const FILTERS = [
   { label: 'Cafés', emoji: '☕', query: 'cafe' },
   { label: 'Sweets', emoji: '🍰', query: 'dessert' },
   { label: 'Spa & Wellness', emoji: '🧖', query: 'spa' },
-] as const;
+  {
+    label: 'Activities',
+    emoji: '🎯',
+    query: ['entertainment', 'museum', 'park', 'swimming', 'fitness'],
+  },
+];
 
 export default function ExploreStores({
   initialStores,
@@ -36,15 +41,28 @@ export default function ExploreStores({
   const [sort, setSort] = useState<SortKey>('distance');
 
   const load = useCallback(
-    async (ll: string, query: string, filter: string) => {
+    async (ll: string, query: string | string[], filter: string) => {
       setFetching(true);
       setFetchError(null);
       try {
-        const params = new URLSearchParams({ latLong: ll, limit: '30' });
-        if (query) params.set('query', query);
-        const res = await fetch(`/api/stores?${params}`);
-        if (!res.ok) throw new Error();
-        setStores(await res.json());
+        const queries = Array.isArray(query) ? query : [query];
+        const responses = await Promise.all(
+          queries.map(async (q) => {
+            const params = new URLSearchParams({ latLong: ll, limit: '30' });
+            if (q) params.set('query', q);
+            const res = await fetch(`/api/stores?${params}`);
+            if (!res.ok) throw new Error();
+            return (await res.json()) as HalalStore[];
+          })
+        );
+        const merged = responses.flat();
+        const seen = new Set<string>();
+        const unique = merged.filter((s) => {
+          if (seen.has(s.id)) return false;
+          seen.add(s.id);
+          return true;
+        });
+        setStores(unique);
         setActiveFilter(filter);
         setSearched(true);
       } catch {
