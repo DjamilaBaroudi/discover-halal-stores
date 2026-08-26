@@ -18,6 +18,7 @@ export function formatDistance(m?: number) {
 }
 
 const FALLBACKS: { match: RegExp; emoji: string; gradient: string }[] = [
+  { match: /mosque|masjid|place of worship/i, emoji: '🕌', gradient: 'from-emerald-100 to-brand-500/60' },
   { match: /brunch|breakfast/i, emoji: '🍳', gradient: 'from-amber-200 to-orange-300' },
   { match: /baker|bread|pastry/i, emoji: '🥐', gradient: 'from-amber-100 to-amber-300' },
   { match: /butcher|meat/i, emoji: '🥩', gradient: 'from-rose-200 to-red-300' },

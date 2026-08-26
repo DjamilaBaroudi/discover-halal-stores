@@ -9,7 +9,14 @@ import type { HalalStore } from '@/lib/types';
 
 type SortKey = 'distance' | 'name';
 
-const FILTERS: { label: string; emoji: string; query: string | string[] }[] = [
+interface Filter {
+  label: string;
+  emoji: string;
+  query?: string | string[];
+  endpoint?: string;
+}
+
+const FILTERS: Filter[] = [
   { label: 'All', emoji: '✨', query: 'halal' },
   { label: 'Restaurants', emoji: '🍽️', query: 'halal restaurant' },
   { label: 'Brunch', emoji: '🍳', query: 'halal brunch' },
@@ -19,11 +26,7 @@ const FILTERS: { label: string; emoji: string; query: string | string[] }[] = [
   { label: 'Cafés', emoji: '☕', query: 'cafe' },
   { label: 'Sweets', emoji: '🍰', query: 'dessert' },
   { label: 'Spa & Wellness', emoji: '🧖', query: 'spa' },
-  {
-    label: 'Activities',
-    emoji: '🎯',
-    query: ['entertainment', 'museum', 'park', 'swimming', 'fitness'],
-  },
+  { label: 'Mosques & Activities', emoji: '🕌', endpoint: '/api/activities' },
 ];
 
 export default function ExploreStores({
@@ -41,16 +44,18 @@ export default function ExploreStores({
   const [sort, setSort] = useState<SortKey>('distance');
 
   const load = useCallback(
-    async (ll: string, query: string | string[], filter: string) => {
+    async (ll: string, filter: Filter) => {
       setFetching(true);
       setFetchError(null);
       try {
+        const { endpoint = '/api/stores', query = '' } = filter;
         const queries = Array.isArray(query) ? query : [query];
         const responses = await Promise.all(
           queries.map(async (q) => {
-            const params = new URLSearchParams({ latLong: ll, limit: '30' });
+            const params = new URLSearchParams({ latLong: ll });
+            if (endpoint === '/api/stores') params.set('limit', '30');
             if (q) params.set('query', q);
-            const res = await fetch(`/api/stores?${params}`);
+            const res = await fetch(`${endpoint}?${params}`);
             if (!res.ok) throw new Error();
             return (await res.json()) as HalalStore[];
           })
@@ -63,7 +68,7 @@ export default function ExploreStores({
           return true;
         });
         setStores(unique);
-        setActiveFilter(filter);
+        setActiveFilter(filter.label);
         setSearched(true);
       } catch {
         setFetchError('Something went wrong fetching stores. Please try again.');
@@ -75,7 +80,7 @@ export default function ExploreStores({
   );
 
   useEffect(() => {
-    if (latLong) load(latLong, 'halal', 'All');
+    if (latLong) load(latLong, FILTERS[0]);
   }, [latLong, load]);
 
   const visible = useMemo(() => {
@@ -93,7 +98,7 @@ export default function ExploreStores({
       <div className="flex flex-col items-center gap-4">
         <SearchBar
           onSearch={(q) => {
-            if (latLong) load(latLong, q || 'halal', 'All');
+            if (latLong) load(latLong, { ...FILTERS[0], query: q || 'halal' });
             else trackLocation();
           }}
           disabled={fetching || isLoading}
@@ -113,7 +118,7 @@ export default function ExploreStores({
             <button
               key={f.label}
               onClick={() => {
-                if (latLong) load(latLong, f.query, f.label);
+                if (latLong) load(latLong, f);
                 else trackLocation();
               }}
               disabled={fetching || isLoading}

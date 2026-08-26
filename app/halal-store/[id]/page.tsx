@@ -2,14 +2,17 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import StoreRatingClient from '@/components/store-rating-client';
-import { fetchHalalStores } from '@/lib/foursquare';
+import { fetchHalalStores, DEFAULT_LOCATION } from '@/lib/foursquare';
+import { fetchMuslimActivities } from '@/lib/osm';
 import { getConvexClient, api } from '@/lib/convex-server';
 import { formatDistance, StoreImage } from '@/components/store-card';
 
 export const revalidate = 600;
 
 async function getStore(id: string) {
-  const stores = await fetchHalalStores({ limit: 30 });
+  const stores = id.startsWith('osm-')
+    ? await fetchMuslimActivities(DEFAULT_LOCATION)
+    : await fetchHalalStores({ limit: 30 });
   const store = stores.find((s) => s.id === id);
   if (!store) return null;
 
